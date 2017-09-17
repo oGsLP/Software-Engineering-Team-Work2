@@ -100,7 +100,6 @@
 			<ol start="15">
 				<li>审批单据</li>
 				<li>查看销售明细</li>
-				<li>制定付款单</li>
 				<li>查看经营历程</li>
 				<li>查看经营情况</li>
 				<li>制定销售策略</li>
@@ -122,44 +121,44 @@
 
 <table>
 	<tr align="left">
-		<th>**ID**</th>
+		<th>ID</th>
 		<th>1</th>
-		<th>**名称**</th>
+		<th>名称</th>
 		<th>商品分类管理</th>
 	</tr>
 	<tr align="left">
-		<th>**创建者**</th>
+		<th>创建者</th>
 		<th>潘羽</th>
-		<th>**最后一次更新者**</th>
+		<th>最后一次更新者</th>
 		<th>`name`</th>
 	</tr>
 	<tr align="left">
-		<th>**创建日期**</th>
+		<th>创建日期</th>
 		<th>2017-09-09</th>
-		<th>**最后更新日期**</th>
+		<th>最后更新日期</th>
 		<th>`date`</th>
 	</tr>
 	<tr align="left">
-		<th>**参与者**</th>
+		<th>参与者</th>
 		<th colspan="3">库存管理人员，目标是精准操作分类，自动生成分类编号并能增删改查商品属性</th>
 	<tr align="left">
-		<th>**触发条件**</th>
+		<th>触发条件</th>
 		<th colspan="3">库存人员修改分类或商品属性，查询商品</th>
 	</tr>
 	<tr align="left">
-		<th>**前置条件**</th>
+		<th>前置条件</th>
 		<th colspan="3">库存管理人员已经被识别和授权</th>
 	</tr>
 	<tr align="left">
-		<th>**后置条件**</th>
+		<th>后置条件</th>
 		<th colspan="3">自动生成商品分类编号；保存修改后的商品属性；提供商品查询后的结果</th>
 	</tr>
 	<tr align="left">
-		<th>**优先级**</th>
+		<th>优先级</th>
 		<th colspan="3">中</th>
 	</tr>
 	<tr align="left">
-		<th>**正常流程**</th>
+		<th>正常流程</th>
 		<th colspan="3">
 			<ol>
 				<li>库存管理人员对商品进行分类操作</li>
@@ -177,7 +176,7 @@
 		</th>
 	</tr>
 	<tr align="left">
-		<th>**扩展流程**</th>
+		<th>扩展流程</th>
 		<th colspan="3">2a. 非法添加子类：
 					<br>1.系统提示错误并拒绝添加
 					<br>6a. 操作失误：
@@ -189,7 +188,7 @@
 		</th>
 	</tr>
 	<tr align="left">
-		<th>**特殊需求**</th>
+		<th>特殊需求</th>
 		<th colspan="3">
 			<ol>
 				<li>系统要能判断是否能添加商品分类</li>
@@ -1255,7 +1254,7 @@
 <br>
 <br>
 <br>
-##用例15.期初建账
+##用例15.审批单据
 <table>
 	<tr align="left">
 		<th>ID</th>
