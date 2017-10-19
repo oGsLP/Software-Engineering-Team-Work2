@@ -5,6 +5,7 @@ package vo;
  */
 public class CommodityVO {
     String presetTime;      //预设时间
+    String date;            //日期
     long deliveryAmount;    //出库数量，金额
     long deliveryMoney;
     long storageAmount;     //入库数量，金额
@@ -14,8 +15,9 @@ public class CommodityVO {
     long saleAmount;        //销售数量，金额
     long saleMoney;
 
-    public CommodityVO(long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
+    public CommodityVO(String date, long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
                        long stockAmount, long stockMoney, long saleAmount, long saleMoney){
+        this.date = date;
         this.deliveryAmount = deliveryAmount;
         this.deliveryMoney  = deliveryMoney;
         this.storageAmount  = storageAmount;

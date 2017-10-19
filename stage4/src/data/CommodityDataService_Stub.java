@@ -1,7 +1,6 @@
 package data;
 
 import businesslogicservice.ResultMessage;
-import com.sun.org.apache.regexp.internal.RE;
 import dataservice.CommodityDataService;
 import po.CommodityPO;
 import java.text.SimpleDateFormat;
@@ -12,6 +11,7 @@ import java.util.ArrayList;
  */
 public class CommodityDataService_Stub implements CommodityDataService{
     String presetTime;      //预设时间
+    String date;            //日期
     long deliveryAmount;    //出库数量，金额
     long deliveryMoney;
     long storageAmount;     //入库数量，金额
@@ -20,8 +20,9 @@ public class CommodityDataService_Stub implements CommodityDataService{
     long stockMoney;
     long saleAmount;        //销售数量，金额
     long saleMoney;
-    public CommodityDataService_Stub(long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
+    public CommodityDataService_Stub(String date, long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
                                      long stockAmount, long stockMoney, long saleAmount, long saleMoney){
+        this.date = date;
         this.deliveryAmount = deliveryAmount;
         this.deliveryMoney  = deliveryMoney;
         this.storageAmount  = storageAmount;

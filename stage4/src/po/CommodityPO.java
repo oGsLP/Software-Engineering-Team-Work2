@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public class CommodityPO implements Serializable{
     String presetTime;      //预设时间
+    String date;            //日期
     long deliveryAmount;    //出库数量，金额
     long deliveryMoney;
     long storageAmount;     //入库数量，金额
@@ -16,8 +17,9 @@ public class CommodityPO implements Serializable{
     long saleAmount;        //销售数量，金额
     long saleMoney;
 
-   public CommodityPO(long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
+   public CommodityPO(String date, long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
                       long stockAmount, long stockMoney, long saleAmount, long saleMoney){
+       this.date = date;
        this.deliveryAmount = deliveryAmount;
        this.deliveryMoney  = deliveryMoney;
        this.storageAmount  = storageAmount;
