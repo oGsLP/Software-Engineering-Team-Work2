@@ -1,16 +1,14 @@
-package ClassifyPO;
-
-import java.io.Serializable;
+package po;
 
 /**
- * Created by py on 2017/10/18.
+ * Created by py on 2017/10/19.
  */
-public class ClassifyPo implements Serializable{
+public class ClassifyPO {
     String name;
     String number;
 
 
-    public ClassifyPo(String name, String number){
+    public ClassifyPO(String name, String number){
         this.name = name;
         this.number = number;
     }
