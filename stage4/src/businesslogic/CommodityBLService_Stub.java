@@ -1,9 +1,7 @@
 package businesslogic;
 
-import businesslogicservice.CommodityBLService;
 import businesslogicservice.ResultMessage;
 import vo.CommodityVO;
-
 import java.util.ArrayList;
 
 /**
