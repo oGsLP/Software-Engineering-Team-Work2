@@ -1,9 +1,11 @@
 package po;
 
+import java.io.Serializable;
+
 /**
  * Created by py on 2017/10/19.
  */
-public class ClassifyPO {
+public class ClassifyPO implements Serializable{
     String name;
     String number;
 

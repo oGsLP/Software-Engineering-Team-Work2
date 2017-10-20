@@ -51,3 +51,4 @@ public class GoodsPO implements Serializable{
         return recentRetPrice;
     }
 }
+
