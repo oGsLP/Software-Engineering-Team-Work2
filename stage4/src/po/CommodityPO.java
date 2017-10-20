@@ -29,6 +29,9 @@ public class CommodityPO implements Serializable{
        this.saleAmount     = saleAmount;
        this.saleMoney      = saleMoney;
    }
+   public String getDate(){
+       return date;
+   }
    public String getPresetTime(){
        return presetTime;
    }

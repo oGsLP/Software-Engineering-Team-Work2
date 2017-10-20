@@ -25,25 +25,25 @@ public class ClassifyBLService_Stub implements ClassifyBLService{
     public String getNumber(){
         return number;
     }
-    public ArrayList<ClassifyVO> checkCommodity(){
+    public ArrayList<ClassifyVO> checkClassify(String node){
         ArrayList<ClassifyVO> list = new ArrayList<>();
         ClassifyVO vo = new ClassifyVO(name, number);
         list.add(vo);
         return list;
     }
-    public ResultMessage addCommodity(ClassifyVO vo){
+    public ResultMessage addClassify(ClassifyVO vo){
         if(vo != null)
             return ResultMessage.Success;
         else
             return ResultMessage.Fail;
     }
-    public ResultMessage deleteCommodity(ClassifyVO vo){
+    public ResultMessage deleteClassify(ClassifyVO vo){
         if(vo != null)
             return ResultMessage.Success;
         else
             return ResultMessage.Fail;
     }
-    public ResultMessage modifyCommodity(ClassifyVO vo){
+    public ResultMessage modifyClassify(ClassifyVO vo){
         if(vo != null)
             return ResultMessage.Success;
         else

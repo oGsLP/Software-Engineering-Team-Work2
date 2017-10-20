@@ -1,5 +1,6 @@
 package businesslogic;
 
+import businesslogicservice.CommodityBLService;
 import businesslogicservice.ResultMessage;
 import vo.CommodityVO;
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by py on 2017/10/19.
  */
-public class CommodityBLService_Stub {
+public class CommodityBLService_Stub implements CommodityBLService{
     String presetTime;      //预设时间
     String date;            //日期
     long deliveryAmount;    //出库数量，金额

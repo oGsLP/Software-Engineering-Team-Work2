@@ -10,7 +10,7 @@ public interface GoodsBLService {
     public ResultMessage deleteGoods(GoodsVO vo);
     public ResultMessage modifyGoods(GoodsVO vo);
     public ArrayList<GoodsVO> findGoods(String keywords);
-    public ArrayList<GoodsVO> getGoods(String node);
+    public ArrayList<GoodsVO> getGoods(String node); //To be updated, replace String.
 
 
 }

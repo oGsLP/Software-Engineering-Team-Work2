@@ -7,10 +7,9 @@ import java.util.ArrayList;
  * Created by py on 2017/10/19.
  */
 public interface ClassifyBLService {
-   public ArrayList<ClassifyVO> checkCommodity();
-   public ResultMessage addCommodity(ClassifyVO vo);
-   public ResultMessage deleteCommodity(ClassifyVO vo);
-   public ResultMessage modifyCommodity(ClassifyVO vo);
-   public ArrayList<ClassifyVO> findClassify(String keywords);
+   public ArrayList<ClassifyVO> checkClassify(String node); // To be updated
+   public ResultMessage addClassify(ClassifyVO vo);
+   public ResultMessage deleteClassify(ClassifyVO vo);
+   public ResultMessage modifyClassify(ClassifyVO vo);
 
 }

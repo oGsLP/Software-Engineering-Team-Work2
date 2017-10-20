@@ -1,5 +1,6 @@
 package businesslogic;
 
+import businesslogicservice.GoodsBLService;
 import businesslogicservice.ResultMessage;
 import vo.GoodsVO;
 
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 /**
  * Created by py on 2017/10/19.
  */
-public class GoodsBLService_Stub {
+public class GoodsBLService_Stub implements GoodsBLService{
     String number;
     String name;
     String type;
