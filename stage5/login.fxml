@@ -18,7 +18,7 @@
       <TextField layoutX="430.0" layoutY="152.0" />
       <Label layoutX="355.0" layoutY="200.0" text="Password" />
       <TextField layoutX="430.0" layoutY="195.0" />
-      <RadioButton layoutX="350.0" layoutY="239.0" mnemonicParsing="false" text="记住用户名" />
+      <RadioButton layoutX="350.0" layoutY="243.0" mnemonicParsing="false" text="记住用户名" />
       <Button layoutX="430.0" layoutY="287.0" mnemonicParsing="false" text="Login" />
       <Button layoutX="528.0" layoutY="287.0" mnemonicParsing="false" text="Register" />
    </children>
