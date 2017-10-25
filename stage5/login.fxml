@@ -9,7 +9,7 @@
    <children>
       <ImageView fitHeight="366.0" fitWidth="335.0" layoutY="88.0">
          <image>
-            <Image url="@../../../Downloads/loginbackground.jpg" />
+            <Image url="@pictures/loginbackground.jpg" />
          </image>
       </ImageView>
       <Label layoutX="7.0" layoutY="14.0" prefHeight="27.0" prefWidth="387.0" text="企业进存销系统" />

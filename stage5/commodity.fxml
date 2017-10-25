@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="157.0" fitWidth="150.0" layoutY="6.0">
+         <image>
+            <Image url="@pictures/commodity.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="20.0" layoutY="208.0" mnemonicParsing="false" text="商品分类" />
+      <Button layoutX="20.0" layoutY="273.0" mnemonicParsing="false" text="商品管理" />
+      <Button layoutX="20.0" layoutY="341.0" mnemonicParsing="false" text="库存查看" />
+      <Button layoutX="20.0" layoutY="403.0" mnemonicParsing="false" text="库存盘点" />
+      <Label layoutX="363.0" layoutY="93.0" prefHeight="17.0" prefWidth="97.0" text="报表" />
+      <Label layoutX="346.0" layoutY="29.0" text="进销存系统库存" />
+   </children>
+</AnchorPane>
