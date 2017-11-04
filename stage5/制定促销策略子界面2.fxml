@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="47.0" layoutY="40.0" text="制定特价包：" />
+      <TableView layoutX="101.0" layoutY="86.0" prefHeight="90.0" prefWidth="152.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="名称" />
+          <TableColumn prefWidth="75.0" text="价格" />
+        </columns>
+      </TableView>
+      <Button layoutX="326.0" layoutY="108.0" mnemonicParsing="false" text="添加" />
+      <Button layoutX="326.0" layoutY="132.0" mnemonicParsing="false" text="删除" />
+      <VBox layoutX="492.0" layoutY="283.0">
+         <children>
+            <Button layoutX="492.0" layoutY="437.0" mnemonicParsing="false" text="确认" />
+            <Button layoutX="492.0" layoutY="460.0" mnemonicParsing="false" text="取消" />
+         </children>
+      </VBox>
+      <Label layoutX="101.0" layoutY="222.0" text="时间区间：" />
+      <HBox layoutX="382.0" layoutY="222.0">
+         <children>
+            <HBox>
+               <children>
+                  <TextArea layoutX="257.0" layoutY="50.0" prefHeight="15.0" prefWidth="41.0" />
+               </children>
+            </HBox>
+            <Label layoutX="294.0" layoutY="50.0" text="年" />
+            <TextArea layoutX="306.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="340.0" layoutY="50.0" text="月" />
+            <TextArea layoutX="360.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="390.0" layoutY="50.0" text="日" />
+         </children>
+      </HBox>
+      <Label layoutX="350.0" layoutY="222.0" text="~" />
+      <HBox layoutX="190.0" layoutY="222.0">
+         <children>
+            <TextArea layoutX="257.0" layoutY="50.0" prefHeight="15.0" prefWidth="41.0" />
+            <Label layoutX="294.0" layoutY="50.0" text="年" />
+            <TextArea layoutX="306.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="340.0" layoutY="50.0" text="月" />
+            <TextArea layoutX="360.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="390.0" layoutY="50.0" text="日" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

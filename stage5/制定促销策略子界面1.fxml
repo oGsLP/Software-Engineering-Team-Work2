@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="47.0" layoutY="40.0" text="制定用户促销策略：" />
+      <Label layoutX="101.0" layoutY="81.0" text="用户级别选择：" />
+      <CheckBox layoutX="214.0" layoutY="81.0" mnemonicParsing="false" text="1级" />
+      <CheckBox layoutX="273.0" layoutY="81.0" mnemonicParsing="false" text="2级" />
+      <CheckBox layoutX="330.0" layoutY="81.0" mnemonicParsing="false" text="3级" />
+      <CheckBox layoutX="384.0" layoutY="81.0" mnemonicParsing="false" text="4 级" />
+      <CheckBox layoutX="448.0" layoutY="81.0" mnemonicParsing="false" text="5 级" />
+      <Label layoutX="101.0" layoutY="109.0" text="赠品：" />
+      <TableView layoutX="119.0" layoutY="143.0" prefHeight="90.0" prefWidth="152.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="名称" />
+          <TableColumn prefWidth="75.0" text="数量" />
+        </columns>
+      </TableView>
+      <Button layoutX="344.0" layoutY="165.0" mnemonicParsing="false" text="添加" />
+      <Button layoutX="344.0" layoutY="189.0" mnemonicParsing="false" text="删除" />
+      <Label layoutX="101.0" layoutY="254.0" text="价格折让：" />
+      <TextArea layoutX="190.0" layoutY="254.0" prefHeight="16.0" prefWidth="108.0" />
+      <Label layoutX="101.0" layoutY="288.0" text="赠送代金卷：" />
+      <TextArea layoutX="190.0" layoutY="288.0" prefHeight="15.0" prefWidth="108.0" />
+      <VBox layoutX="492.0" layoutY="398.0">
+         <children>
+            <Button layoutX="492.0" layoutY="437.0" mnemonicParsing="false" text="确认" />
+            <Button layoutX="492.0" layoutY="460.0" mnemonicParsing="false" text="取消" />
+         </children>
+      </VBox>
+      <Label layoutX="101.0" layoutY="337.0" text="时间区间：" />
+      <HBox layoutX="382.0" layoutY="337.0">
+         <children>
+            <HBox>
+               <children>
+                  <TextArea layoutX="257.0" layoutY="50.0" prefHeight="15.0" prefWidth="41.0" />
+               </children>
+            </HBox>
+            <Label layoutX="294.0" layoutY="50.0" text="年" />
+            <TextArea layoutX="306.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="340.0" layoutY="50.0" text="月" />
+            <TextArea layoutX="360.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="390.0" layoutY="50.0" text="日" />
+         </children>
+      </HBox>
+      <Label layoutX="350.0" layoutY="337.0" text="~" />
+      <HBox layoutX="190.0" layoutY="337.0">
+         <children>
+            <TextArea layoutX="257.0" layoutY="50.0" prefHeight="15.0" prefWidth="41.0" />
+            <Label layoutX="294.0" layoutY="50.0" text="年" />
+            <TextArea layoutX="306.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="340.0" layoutY="50.0" text="月" />
+            <TextArea layoutX="360.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="390.0" layoutY="50.0" text="日" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

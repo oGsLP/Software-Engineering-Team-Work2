@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="685.0">
+         <children>
+            <TableView layoutX="14.0" layoutY="53.0" prefHeight="148.0" prefWidth="602.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn prefWidth="64.0" text="选择" />
+                  <TableColumn prefWidth="336.0" text="分类" />
+                  <TableColumn prefWidth="117.0" text="名称" />
+                  <TableColumn prefWidth="75.0" text="类别" />
+                  <TableColumn prefWidth="75.0" text="型号" />
+                  <TableColumn prefWidth="75.0" text="进价/售价" />
+                  <TableColumn prefWidth="75.0" text="最近进价" />
+                  <TableColumn prefWidth="75.0" text="最近售价" />
+               </columns>
+            </TableView>
+            <HBox layoutX="24.0" layoutY="30.0">
+               <children>
+                  <Button layoutX="30.0" layoutY="24.0" mnemonicParsing="false" text="添加" />
+                  <Button layoutX="70.0" layoutY="24.0" mnemonicParsing="false" text="删除" />
+                  <Button layoutX="110.0" layoutY="24.0" mnemonicParsing="false" text="修改" />
+               </children>
+            </HBox>
+            <Label layoutX="24.0" layoutY="7.0" text="商品信息：" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="685.0">
+         <children>
+            <TableView layoutX="14.0" layoutY="53.0" prefHeight="148.0" prefWidth="602.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn prefWidth="103.0" text="选择" />
+                  <TableColumn prefWidth="106.0" text="分类" />
+                  <TableColumn prefWidth="117.0" text="名称" />
+                  <TableColumn prefWidth="75.0" text="联系方式" />
+                  <TableColumn prefWidth="75.0" text="应收" />
+                  <TableColumn prefWidth="75.0" text="应付" />
+               </columns>
+            </TableView>
+            <HBox layoutX="24.0" layoutY="30.0">
+               <children>
+                  <Button layoutX="30.0" layoutY="24.0" mnemonicParsing="false" text="添加" />
+                  <Button layoutX="70.0" layoutY="24.0" mnemonicParsing="false" text="删除" />
+                  <Button layoutX="110.0" layoutY="24.0" mnemonicParsing="false" text="修改" />
+               </children>
+            </HBox>
+            <Label layoutX="24.0" text="客户信息" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="483.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="685.0">
+         <children>
+            <TableView layoutX="14.0" layoutY="53.0" prefHeight="148.0" prefWidth="602.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn prefWidth="103.0" text="选择" />
+                  <TableColumn prefWidth="106.0" text="名称" />
+                  <TableColumn prefWidth="117.0" text="金额" />
+               </columns>
+            </TableView>
+            <HBox layoutX="24.0" layoutY="30.0">
+               <children>
+                  <Button layoutX="30.0" layoutY="24.0" mnemonicParsing="false" text="添加" />
+                  <Button layoutX="70.0" layoutY="24.0" mnemonicParsing="false" text="删除" />
+                  <Button layoutX="110.0" layoutY="24.0" mnemonicParsing="false" text="修改" />
+               </children>
+            </HBox>
+            <Label layoutX="24.0" layoutY="7.0" text="银行账户信息" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

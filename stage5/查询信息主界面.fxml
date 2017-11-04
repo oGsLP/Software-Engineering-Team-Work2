@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="78.0" layoutY="53.0" text="请输入时间区间：" />
+      <Label layoutX="78.0" layoutY="86.0" text="请选择单据类型：" />
+      <Label layoutX="78.0" layoutY="120.0" text="请输入客户姓名（名称）：" />
+      <Label layoutX="78.0" layoutY="157.0" text="请填写业务员编号：" />
+      <Label layoutX="78.0" layoutY="199.0" text="请选择仓库编号：" />
+      <HBox layoutX="193.0" layoutY="53.0">
+         <children>
+            <TextArea layoutX="257.0" layoutY="50.0" prefHeight="15.0" prefWidth="41.0" />
+            <Label layoutX="294.0" layoutY="50.0" text="年" />
+            <TextArea layoutX="306.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="340.0" layoutY="50.0" text="月" />
+            <TextArea layoutX="360.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="390.0" layoutY="50.0" text="日" />
+         </children>
+      </HBox>
+      <Label layoutX="353.0" layoutY="53.0" text="~" />
+      <HBox layoutX="385.0" layoutY="53.0">
+         <children>
+            <HBox>
+               <children>
+                  <TextArea layoutX="257.0" layoutY="50.0" prefHeight="15.0" prefWidth="41.0" />
+               </children>
+            </HBox>
+            <Label layoutX="294.0" layoutY="50.0" text="年" />
+            <TextArea layoutX="306.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="340.0" layoutY="50.0" text="月" />
+            <TextArea layoutX="360.0" layoutY="50.0" prefHeight="15.0" prefWidth="30.0" />
+            <Label layoutX="390.0" layoutY="50.0" text="日" />
+         </children>
+      </HBox>
+      <ChoiceBox layoutX="193.0" layoutY="82.0" prefHeight="15.0" prefWidth="144.0" />
+      <TextArea layoutX="245.0" layoutY="120.0" prefHeight="15.0" prefWidth="190.0" />
+      <TextArea layoutX="222.0" layoutY="157.0" prefHeight="15.0" prefWidth="190.0" />
+      <ChoiceBox layoutX="212.0" layoutY="195.0" prefHeight="15.0" prefWidth="151.0" />
+      <VBox layoutX="195.0" layoutY="270.0">
+         <children>
+            <Button layoutX="259.0" layoutY="267.0" mnemonicParsing="false" text="查询" />
+            <Button layoutX="259.0" layoutY="290.0" mnemonicParsing="false" text="取消" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

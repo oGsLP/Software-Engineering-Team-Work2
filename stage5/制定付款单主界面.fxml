@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="172.0" layoutY="26.0">
+         <children>
+            <Label layoutX="110.0" text="付款单" />
+            <TextField layoutX="79.0" layoutY="81.0" />
+            <Label layoutY="26.0" text="单据编号" />
+            <Label layoutY="119.0" text="操作员" />
+            <TextField layoutX="79.0" layoutY="115.0" />
+            <Label layoutY="55.0" text="供应商" />
+            <Label layoutX="79.0" layoutY="26.0" text="xxxxx" />
+            <TextField layoutX="79.0" layoutY="51.0" />
+            <Label layoutY="85.0" text="销售商" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="127.0" layoutY="185.0" text="转账列表：" />
+      <TableView layoutX="173.0" layoutY="224.0" prefHeight="199.0" prefWidth="365.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="银行账户" />
+          <TableColumn prefWidth="93.0" text="转账金额" />
+            <TableColumn prefWidth="169.0" text="备注" />
+        </columns>
+      </TableView>
+      <Label layoutX="173.0" layoutY="460.0" text="总额汇总：" />
+      <Label layoutX="261.0" layoutY="460.0" text="xxxx" />
+      <VBox layoutX="495.0" layoutY="475.0">
+         <children>
+            <Button layoutX="495.0" layoutY="475.0" mnemonicParsing="false" text="提交" />
+            <Button layoutX="495.0" layoutY="509.0" mnemonicParsing="false" text="取消" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="149.0" layoutY="36.0" prefHeight="275.0" prefWidth="303.0" style="-fx-background-color: #CDCDCD 106;">
+         <children>
+            <Label layoutX="136.0" layoutY="14.0" text="单据" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="451.0" layoutY="343.0">
+         <children>
+            <Button layoutX="452.0" layoutY="343.0" mnemonicParsing="false" text="通过" />
+            <Button layoutX="452.0" layoutY="366.0" mnemonicParsing="false" text="不通过" />
+            <Button layoutX="451.0" layoutY="389.0" mnemonicParsing="false" text="取消操作" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

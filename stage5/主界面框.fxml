@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="14.0" prefHeight="400.0" prefWidth="130.0" style="-fx-border-color: blue;">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="28.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Documents/Tencent%20Files/593955515/FileRecv/图/@(NCKTOIU79%60(LGQM4O%7DZKB.jpg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="5.0" layoutY="108.0">
+               <children>
+                  <Button layoutX="6.0" layoutY="108.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="资金流动" />
+                  <Button layoutX="5.0" layoutY="145.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="库存管理" />
+                  <Button layoutX="6.0" layoutY="182.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="预警管理" />
+               </children>
+            </VBox>
+            <Label layoutX="38.0" layoutY="326.0" text="by xxx" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="160.0" layoutY="81.0" prefHeight="320.0" prefWidth="440.0" style="-fx-border-color: blue;" />
+      <Label layoutX="200.0" layoutY="36.0" text="库存管理" />
+      <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="482.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Documents/Tencent%20Files/593955515/FileRecv/大作业/局部全局概念图.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="515.0" layoutY="34.0" text="肖云帆" />
+      <Button layoutX="559.0" layoutY="31.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="8.0" text="Button" />
+   </children>
+</AnchorPane>
