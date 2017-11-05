@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="48.0" layoutY="35.0" prefHeight="42.0" prefWidth="85.0" text="商品查询">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="91.0" layoutY="77.0" prefHeight="30.0" prefWidth="122.0" text="ID查询" />
+      <Button layoutX="467.0" layoutY="344.0" mnemonicParsing="false" text="返回上一层" />
+      <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="485.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Documents/Tencent%20Files/593955515/FileRecv/图/@(NCKTOIU79%60(LGQM4O%7DZKB.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="502.0" layoutY="115.0" text="yyy" />
+      <Label layoutX="57.0" layoutY="144.0" prefHeight="20.0" prefWidth="95.0" text="请输入查询ID" />
+      <TextField layoutX="213.0" layoutY="139.0" opacity="0.57" text="如&amp;00001" />
+      <AnchorPane layoutX="57.0" layoutY="187.0" prefHeight="148.0" prefWidth="509.0" style="-fx-border-color: blue;">
+         <children>
+            <Label ellipsisString="" layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="66.0" text="查询结果" />
+            <Label layoutX="31.0" layoutY="46.0" text="ID" />
+            <Label layoutX="99.0" layoutY="46.0" text="名称" />
+            <Label layoutX="168.0" layoutY="46.0" text="单价" />
+            <Label layoutX="259.0" layoutY="46.0" text="商品类别" />
+            <Label layoutX="18.0" layoutY="83.0" prefHeight="20.0" prefWidth="59.0" text="&amp;00001" />
+            <Label layoutX="99.0" layoutY="83.0" text="pg" />
+            <Label layoutX="164.0" layoutY="83.0" text="50" />
+            <Label layoutX="264.0" layoutY="83.0" text="A类" />
+            <CheckBox layoutX="375.0" layoutY="83.0" mnemonicParsing="false" />
+            <Button layoutX="420.0" layoutY="78.0" mnemonicParsing="false" text="选择" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="85.0" text="库存系统">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="61.0" layoutY="44.0" prefHeight="30.0" prefWidth="122.0" text="盘点库存" />
+      <Button layoutX="712.0" layoutY="436.0" mnemonicParsing="false" text="返回上一层" />
+      <ImageView fitHeight="72.0" fitWidth="70.0" layoutX="748.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Documents/Tencent%20Files/593955515/FileRecv/图/@(NCKTOIU79%60(LGQM4O%7DZKB.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="765.0" layoutY="109.0" text="yyy" />
+      <AnchorPane layoutX="34.0" layoutY="168.0" prefHeight="264.0" prefWidth="767.0" style="-fx-border-color: blue;">
+         <children>
+            <Label ellipsisString="" layoutX="6.0" layoutY="4.0" prefHeight="20.0" prefWidth="66.0" text="库存变动" />
+            <Label layoutX="9.0" layoutY="26.0" text="货单编号" />
+            <Label layoutX="86.0" layoutY="26.0" text="商品名称" />
+            <Label layoutX="163.0" layoutY="26.0" text="类别" />
+            <Label layoutX="10.0" layoutY="58.0" prefHeight="20.0" prefWidth="59.0" text="#00001" />
+            <Label layoutX="166.0" layoutY="58.0" text="a类" />
+            <Label layoutX="10.0" layoutY="97.0" prefHeight="20.0" prefWidth="59.0" text="#00001" />
+            <Label layoutX="164.0" layoutY="97.0" prefHeight="20.0" prefWidth="59.0" text="b类" />
+            <Label layoutX="213.0" layoutY="26.0" text="数量" />
+            <Label layoutX="356.0" layoutY="26.0" text="原库存" />
+            <Label layoutX="414.0" layoutY="26.0" text="现库存" />
+            <Label layoutX="257.0" layoutY="26.0" text="变动方式" />
+            <Label layoutX="92.0" layoutY="58.0" text="pg" />
+            <Label layoutX="93.0" layoutY="98.0" text="py" />
+            <Label layoutX="219.0" layoutY="58.0" text="10" />
+            <Label layoutX="219.0" layoutY="98.0" text="20" />
+            <ComboBox editable="true" layoutX="258.0" layoutY="53.0" prefHeight="30.0" prefWidth="80.0" promptText="入库" />
+            <ComboBox editable="true" layoutX="258.0" layoutY="93.0" prefHeight="30.0" prefWidth="80.0" promptText="出库" />
+            <Label layoutX="374.0" layoutY="58.0" text="0" />
+            <Label layoutX="428.0" layoutY="58.0" text="10" />
+            <Label layoutX="371.0" layoutY="97.0" text="30" />
+            <Label layoutX="433.0" layoutY="97.0" text="0" />
+            <Label layoutX="484.0" layoutY="26.0" text="变动日期" />
+            <Label layoutX="484.0" layoutY="58.0" text="2017.1.1 22:22" />
+            <Label layoutX="484.0" layoutY="97.0" text="2017.1.1 22:22" />
+            <Label layoutX="624.0" layoutY="26.0" text="操作人" />
+            <Label layoutX="634.0" layoutY="58.0" text="xyh" />
+            <Label layoutX="634.0" layoutY="97.0" text="xyh" />
+            <Button layoutX="684.0" layoutY="53.0" mnemonicParsing="false" text="查看" />
+            <Button layoutX="679.0" layoutY="90.0" mnemonicParsing="false" text="查看" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="46.0" layoutY="99.0" text="起始时段" />
+      <TextArea layoutX="122.0" layoutY="99.0" prefHeight="20.0" prefWidth="44.0" text="2017">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="230.0" layoutY="99.0" prefHeight="20.0" prefWidth="44.0" text="1">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="176.0" layoutY="99.0" prefHeight="20.0" prefWidth="44.0" text="1">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="322.0" layoutY="99.0" prefHeight="20.0" prefWidth="44.0" text="21">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="385.0" layoutY="99.0" prefHeight="20.0" prefWidth="44.0" text="22">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="46.0" layoutY="129.0" text="起始时段" />
+      <TextArea layoutX="122.0" layoutY="129.0" prefHeight="20.0" prefWidth="44.0" text="2017">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="176.0" layoutY="129.0" prefHeight="20.0" prefWidth="44.0" text="1">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="230.0" layoutY="129.0" prefHeight="20.0" prefWidth="44.0" text="2">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="322.0" layoutY="129.0" prefHeight="20.0" prefWidth="44.0" text="21">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <TextArea layoutX="385.0" layoutY="129.0" prefHeight="20.0" prefWidth="44.0" text="55">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="546.0" layoutY="114.0" mnemonicParsing="false" text="查询" />
+      <Label layoutX="186.0" layoutY="36.0" text="商品类别" />
+   </children>
+</AnchorPane>
