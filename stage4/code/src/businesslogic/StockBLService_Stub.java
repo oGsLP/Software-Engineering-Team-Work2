@@ -45,7 +45,7 @@ public class StockBLService_Stub implements StockBLService{
         else
             return ResultMessage.Fail;
     }
-    public ResultMessage finshRecceipt(StockVO vo){
+    public ResultMessage finshReceipt(StockVO vo){
         if(vo != null)
             return ResultMessage.Success;
         else

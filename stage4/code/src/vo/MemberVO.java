@@ -11,7 +11,7 @@ public class MemberVO {
     String phoneNumber;     //电话
     String address;         //地址
     String postcode;        //邮编
-    String mailaddress;     //电子邮箱
+    String mailAddress;     //电子邮箱
     long collectionLimit;   //应收额度
     long collection;        //应收
     long payment;           //应付
@@ -27,7 +27,7 @@ public class MemberVO {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.postcode = postcode;
-        this.mailaddress = mailaddress;
+        this.mailAddress = mailaddress;
         this.collectionLimit = collectionLimit;
         this.collection = collection;
         this.payment = payment;
@@ -54,8 +54,8 @@ public class MemberVO {
     public String getPostcode(){
         return postcode;
     }
-    public String getMailaddress(){
-        return mailaddress;
+    public String getMailAddress(){
+        return mailAddress;
     }
     public long getCollectionLimit(){
         return collectionLimit;

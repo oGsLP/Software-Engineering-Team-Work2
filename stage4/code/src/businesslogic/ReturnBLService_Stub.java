@@ -46,7 +46,7 @@ public class ReturnBLService_Stub implements ReturnBLService{
         else
             return ResultMessage.Fail;
     }
-    public ResultMessage finshRecceipt(ReturnVO vo){
+    public ResultMessage finshReceipt(ReturnVO vo){
         if(vo != null)
             return ResultMessage.Success;
         else

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by py on 2017/10/20.
  */
-public class SaleVO extends ReceiptVO {
+public class SaleVO {
     String number;
     String retailer;
     String salesman;
@@ -21,9 +21,9 @@ public class SaleVO extends ReceiptVO {
     long totalPrice;
     String remark;
     CommodityVO vo;
-    //鐢熸垚涓�涓攢鍞嚭璐у崟锛屽寘鎷細鍗曟嵁缂栧彿锛圶SD-yyyyMMdd-xxxxx锛夛紝瀹㈡埛锛堜粎鏄剧ず閿�鍞晢锛夛紝涓氬姟鍛橈紙鍜岃繖涓鎴锋墦浜ら亾鐨勫叕鍙稿憳宸ワ紝鍙互璁剧疆涓�涓鎴风殑榛樿涓氬姟鍛橈級
-    // 锛屾搷浣滃憳锛堝綋鍓嶇櫥褰曠郴缁熺殑鐢ㄦ埛锛夛紝浠撳簱锛屽嚭璐у晢鍝佹竻鍗曪紝鎶樿鍓嶆�婚锛屾姌璁╋紝浣跨敤浠ｉ噾鍗烽噾棰濓紝鎶樿鍚庢�婚锛屽娉ㄣ�傚嚭璐у晢鍝佹竻鍗曚腑瑕佹樉绀哄晢鍝佺殑缂栧彿锛屽悕绉帮紙浠庡晢鍝侀�夋嫨鐣岄潰閫夋嫨锛夛紝
-    // 鍨嬪彿锛屾暟閲忥紙鎵嬪伐杈撳叆锛夛紝鍗曚环锛堥粯璁や负鍟嗗搧淇℃伅閲岀殑閿�鍞环锛屽彲淇敼锛夛紝閲戦锛堣嚜鍔ㄧ敓鎴愶級锛屽晢鍝佸娉ㄣ�傞攢鍞崟閫氳繃瀹℃壒鍚庯紝浼氭洿鏀瑰簱瀛樻暟鎹拰瀹㈡埛鐨勫簲鏀跺簲浠樻暟鎹��
+    //生成一个销售出货单，包括：单据编号（XSD-yyyyMMdd-xxxxx），客户（仅显示销售商），业务员（和这个客户打交道的公司员工，可以设置一个客户的默认业务员）
+    // ，操作员（当前登录系统的用户），仓库，出货商品清单，折让前总额，折让，使用代金卷金额，折让后总额，备注。出货商品清单中要显示商品的编号，名称（从商品选择界面选择），
+    // 型号，数量（手工输入），单价（默认为商品信息里的销售价，可修改），金额（自动生成），商品备注。销售单通过审批后，会更改库存数据和客户的应收应付数据。
     public SaleVO(String number, String retailer, String salesman, String operator, ArrayList<GoodsVO> goodsList,
                   ArrayList<CommodityVO> commodityList, long price, int discount, long totalPrice, String remark, CommodityVO vo){
         this.number = number;

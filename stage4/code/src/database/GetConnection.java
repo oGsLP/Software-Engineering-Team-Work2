@@ -9,7 +9,6 @@ public class GetConnection {
         String sql = null;
         String url = new String("jdbc:mysql://localhost:3306/demo1?characterEncoding=utf8&useSSL=false");
         try{
-
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url,"root","1212hjkl");
             sta = con.createStatement();

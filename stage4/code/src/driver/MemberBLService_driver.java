@@ -44,7 +44,7 @@ public class MemberBLService_driver {
             System.out.println(vo1.getPhoneNumber());
             System.out.println(vo1.getAddress());
             System.out.println(vo1.getPostcode());
-            System.out.println(vo1.getMailaddress());
+            System.out.println(vo1.getMailAddress());
             System.out.println(vo1.getCollectionLimit());
             System.out.println(vo1.getCollection());
             System.out.println(vo1.getPayment());

@@ -17,5 +17,4 @@ public interface StockDataService {
     public ArrayList<StockPO> getReceipt(StockPO po);
     public CommodityPO stockCom(CommodityPO po, ArrayList<StockPO> receipt);
 
-
 }

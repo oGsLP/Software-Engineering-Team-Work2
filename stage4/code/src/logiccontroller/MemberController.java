@@ -59,8 +59,8 @@ public class MemberController implements MemberBLService{
               keywords || vo.getName().contains(keywords) || vo.getPhoneNumber().equals(keywords) ||
               vo.getAddress().contains(keywords) || vo.getPostcode().equals(keywords) ||
               vo.getMailAddress().contains(keywords) || Long.toString(vo.getCollection()).equals(keywords) ||
-              Long.toString(vo.getCollectionLimit()).equals(keywords) || Long.toString(vo.getPayment()).equals(keywords)
-              || vo.getManagePerson().equals(keywords))
+              Long.toString(vo.getCollectionLimit()).equals(keywords) || Long.toString(vo.getPayment()).
+              equals(keywords) || vo.getManagePerson().equals(keywords))
           return true;
       return false;
     }

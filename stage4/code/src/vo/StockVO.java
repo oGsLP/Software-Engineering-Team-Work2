@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by py on 2017/10/20.
  */
-public class StockVO extends ReceiptVO{
+public class StockVO{
         String number;
         String provider;
         String garbage;
@@ -17,8 +17,8 @@ public class StockVO extends ReceiptVO{
         String remark;
         ArrayList<GoodsVO> receipt;
         CommodityVO vo;
-        //渚涘簲鍟嗭紝浠撳簱锛屾搷浣滃憳锛屽叆搴撳晢鍝佸垪琛紝澶囨敞锛屾�婚鍚堣銆傚叾涓叆搴撳晢鍝佸垪琛ㄥ寘鍚殑淇℃伅鏈夛細鍟嗗搧缂栧彿锛屽悕绉帮紙浠庡晢鍝侀�夋嫨鐣岄潰杩涜閫夋嫨锛夛紝鍨嬪彿锛屾暟閲忥紙鎵嬪姩杈撳叆锛夛紝鍗�
-// 浠凤紙榛樿涓哄晢鍝佷俊鎭腑鐨勮繘浠凤級锛岄噾棰濓紝澶囨敞锛堟墜鍔ㄨ緭鍏ワ級銆傛病鏈変笅鍒掔嚎鐨勯儴鍒嗘槸鑷姩璁＄畻骞跺～鍏呰繘鍘荤殑銆傝繘璐у崟閫氳繃瀹℃壒鍚庯紝浼氭洿鏀瑰簱瀛樻暟鎹拰瀹㈡埛鐨勫簲鏀跺簲浠樻暟鎹�傦級
+        //供应商，仓库，操作员，入库商品列表，备注，总额合计。其中入库商品列表包含的信息有：商品编号，名称（从商品选择界面进行选择），型号，数量（手动输入），单
+// 价（默认为商品信息中的进价），金额，备注（手动输入）。没有下划线的部分是自动计算并填充进去的。进货单通过审批后，会更改库存数据和客户的应收应付数据。）
 
     public StockVO(String number, String provider, String garbage,ArrayList<GoodsVO> receipt,
                    long price, long totalPrice, String remark, CommodityVO vo){

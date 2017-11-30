@@ -88,7 +88,7 @@ public class CommodityBLService_driver {
             System.out.println("Fail");
 
         ResultMessage msg4 = commodityBLService.submitOverflowRecepit(date, list2); // No
-        if(msg3 == ResultMessage.Success)
+        if(msg == ResultMessage.Success)
             System.out.println("Success");
         else
             System.out.println("Fail");
