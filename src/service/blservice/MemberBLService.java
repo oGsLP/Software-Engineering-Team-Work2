@@ -1,5 +1,6 @@
-package businesslogicservice;
+package service.blservice;
 
+import objects.ResultMessage;
 import vo.MemberVO;
 
 import java.util.ArrayList;

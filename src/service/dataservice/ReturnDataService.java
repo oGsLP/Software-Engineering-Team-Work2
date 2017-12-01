@@ -1,10 +1,8 @@
-package dataservice;
+package service.dataservice;
 
-import businesslogicservice.ResultMessage;
+import objects.ResultMessage;
 import po.CommodityPO;
 import po.ReturnPO;
-import po.StockPO;
-import vo.ReturnVO;
 
 import java.util.ArrayList;
 

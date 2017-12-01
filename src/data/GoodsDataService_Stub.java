@@ -1,7 +1,7 @@
 package data;
 
-import businesslogicservice.ResultMessage;
-import dataservice.GoodsDataService;
+import objects.ResultMessage;
+import service.dataservice.GoodsDataService;
 import po.GoodsPO;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package data;
 
-import businesslogicservice.ResultMessage;
-import dataservice.MemberDataService;
+import objects.ResultMessage;
+import service.dataservice.MemberDataService;
 import po.MemberPO;
 
 import java.util.ArrayList;

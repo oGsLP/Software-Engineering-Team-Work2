@@ -1,7 +1,7 @@
 package driver;
 
-import businesslogicservice.MemberBLService;
-import businesslogicservice.ResultMessage;
+import service.blservice.MemberBLService;
+import objects.ResultMessage;
 import vo.MemberVO;
 
 import java.util.ArrayList;

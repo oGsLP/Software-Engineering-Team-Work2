@@ -1,7 +1,7 @@
 package logiccontroller;
 
-import businesslogicservice.ClassifyBLService;
-import businesslogicservice.ResultMessage;
+import service.blservice.ClassifyBLService;
+import objects.ResultMessage;
 import vo.ClassifyVO;
 
 import java.util.ArrayList;

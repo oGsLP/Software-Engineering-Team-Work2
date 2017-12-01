@@ -10,7 +10,9 @@ import java.rmi.Naming;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
-import businesslogicservice.*;
+
+import service.blservice.*;
+
 public class RemoteHelper {
     private Remote remote;
     private static RemoteHelper remoteHelper = new RemoteHelper();

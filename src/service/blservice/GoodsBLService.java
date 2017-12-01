@@ -1,8 +1,9 @@
-package businesslogicservice;
+package service.blservice;
 
 /**
  * Created by py on 2017/10/19.
  */
+import objects.ResultMessage;
 import vo.GoodsVO;
 import java.util.ArrayList;
 public interface GoodsBLService {
@@ -11,6 +12,7 @@ public interface GoodsBLService {
     public ResultMessage modifyGoods(GoodsVO vo);
     public ArrayList<GoodsVO> findGoods(String keywords);
     public ArrayList<GoodsVO> getGoods(String node); //To be updated, replace String.
+
 
 
 }

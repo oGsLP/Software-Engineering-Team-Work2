@@ -1,7 +1,7 @@
 package driver;
 
-import businesslogicservice.CommodityBLService;
-import businesslogicservice.ResultMessage;
+import service.blservice.CommodityBLService;
+import objects.ResultMessage;
 import vo.CommodityVO;
 
 import java.util.ArrayList;

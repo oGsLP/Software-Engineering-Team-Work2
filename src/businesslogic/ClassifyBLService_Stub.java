@@ -1,8 +1,7 @@
 package businesslogic;
 
-import businesslogicservice.ClassifyBLService;
-import businesslogicservice.CommodityBLService;
-import businesslogicservice.ResultMessage;
+import service.blservice.ClassifyBLService;
+import objects.ResultMessage;
 import vo.ClassifyVO;
 
 import java.util.ArrayList;

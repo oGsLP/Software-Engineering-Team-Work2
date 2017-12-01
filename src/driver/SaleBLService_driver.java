@@ -1,9 +1,7 @@
 package driver;
 
-import businesslogicservice.ResultMessage;
-import businesslogicservice.SaleBLService;
-import po.CommodityPO;
-import po.GoodsPO;
+import objects.ResultMessage;
+import service.blservice.SaleBLService;
 import vo.CommodityVO;
 import vo.GoodsVO;
 import vo.SaleVO;

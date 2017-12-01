@@ -1,7 +1,7 @@
 package data;
 
-import businesslogicservice.ResultMessage;
-import dataservice.ClassifyDataService;
+import objects.ResultMessage;
+import service.dataservice.ClassifyDataService;
 import po.ClassifyPO;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package dataservice;
+package service.dataservice;
 
-import businesslogicservice.ResultMessage;
+import objects.ResultMessage;
 import po.CommodityPO;
 
 import java.util.ArrayList;
@@ -9,6 +9,8 @@ import java.util.ArrayList;
  * Created by py on 2017/10/19.
  */
 public interface CommodityDataService {
+    /*
+    * */
     public ResultMessage isInTime(String time);
     public ArrayList<CommodityPO> getComInfo(String date);
     public ArrayList<CommodityPO> getGoods(String goodsNode);

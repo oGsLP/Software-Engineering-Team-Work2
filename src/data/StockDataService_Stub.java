@@ -1,7 +1,7 @@
 package data;
 
-import businesslogicservice.ResultMessage;
-import dataservice.StockDataService;
+import objects.ResultMessage;
+import service.dataservice.StockDataService;
 import po.CommodityPO;
 import po.GoodsPO;
 import po.StockPO;

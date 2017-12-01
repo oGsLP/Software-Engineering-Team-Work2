@@ -1,7 +1,7 @@
 package businesslogic;
 
-import businesslogicservice.ResultMessage;
-import businesslogicservice.SaleBLService;
+import objects.ResultMessage;
+import service.blservice.SaleBLService;
 import po.CommodityPO;
 import po.GoodsPO;
 import vo.SaleVO;
