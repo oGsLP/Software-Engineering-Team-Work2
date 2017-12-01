@@ -1,4 +1,6 @@
 package service.dataservice.Impl;
 
-public class ClassifyDataServiceImpl {
+import service.dataservice.ClassifyDataService;
+
+public class ClassifyDataServiceImpl implements ClassifyDataService{
 }
