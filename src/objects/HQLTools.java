@@ -1,9 +1,8 @@
 package objects;
-import java.io.File;
-import java.io.FileInputStream;
+
+
 import java.util.ArrayList;
 import java.util.List;
-
 import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,8 +17,7 @@ public class HQLTools {
      */
     private static Configuration configuration = new Configuration()
             .addInputStream(HQLTools.class.getResourceAsStream("/hibernate.cfg.xml")).configure();
-    // = new Configuration().configure("hibernate.cfg.xml");//tomcat用这个
-    //
+
     // = new Configuration().configure(new File("hibernate.cfg.xml"));//跑测试用这个
     /**
      * SessionFactory对象

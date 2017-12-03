@@ -1,42 +1,42 @@
 package service.dataservice.Impl;
 
+import objects.HQLTools;
 import objects.ResultMessage;
 import po.GoodsPO;
 import service.dataservice.GoodsDataService;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import java.io.File;
 import java.util.ArrayList;
 
 public class GoodsDataServiceImpl implements GoodsDataService  {
+    String operation = "select * from Goods";
+    private ArrayList<GoodsPO> goodsList = (ArrayList<GoodsPO>)HQLTools.find(operation);
+
+    private ArrayList<String> resultList = new ArrayList<>();
+
     @Override
     public ResultMessage add(GoodsPO po) {
-        if(po == null)
-            return null;
-        Configuration configuration = new Configuration().configure(new File("hibernate.cfg.xml"));
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        session.save(po);
-        session.getTransaction().commit();
-        session.close();
-        sessionFactory.close();
+        if(!goodsList.contains(po))
+            return ResultMessage.Fail;
+        HQLTools.add(po);
+        goodsList.add(po);
         return ResultMessage.Success;
     }
 
     @Override
     public ResultMessage delete(GoodsPO po) {
-        if(po == null)
-            return null;
-        
-
+        if(!goodsList.contains(po))
+            return ResultMessage.Fail;
+        HQLTools.delete(po);
+        goodsList.remove(po);
+        return ResultMessage.Success;
     }
 
     @Override
     public ResultMessage update(GoodsPO po) {
-        return null;
+        // throw warning
+        HQLTools.update(po);
+        goodsList = (ArrayList<GoodsPO>)HQLTools.find(operation);
+        return ResultMessage.Success;
     }
 
     @Override
@@ -46,8 +46,9 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
 
     @Override
     public ArrayList<GoodsPO> find(String keywords) {
+        // Ought to be discussed
         return null;
     }
-
+    
 
 }

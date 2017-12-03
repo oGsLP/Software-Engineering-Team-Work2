@@ -43,6 +43,17 @@ public class GoodsDataService_Stub implements GoodsDataService{
         else
             return ResultMessage.Fail;
     }
+
+    @Override
+    public ResultMessage update(GoodsPO po) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<GoodsPO> retrive(String keywords) {
+        return null;
+    }
+
     public ResultMessage modify(GoodsPO po){
         if(po != null)
             return ResultMessage.Success;
