@@ -38,9 +38,11 @@ public interface GoodsDataService {
     public ArrayList<GoodsPO> retrive(String keywords);
 
     /**
-     * 模糊查找商品信息
-     * @param keywords
+     *
+     * @param number
+     * @param name
+     * @param type
      * @return
      */
-    public ArrayList<GoodsPO>find(String keywords);
+    public ArrayList<GoodsPO>find(String number, String name, String type);
 }

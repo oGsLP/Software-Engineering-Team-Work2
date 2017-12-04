@@ -8,14 +8,14 @@ import service.dataservice.GoodsDataService;
 import java.util.ArrayList;
 
 public class GoodsDataServiceImpl implements GoodsDataService  {
-    String operation = "select * from Goods";
+    String operation = "from Goods";
     private ArrayList<GoodsPO> goodsList = (ArrayList<GoodsPO>)HQLTools.find(operation);
-
-    private ArrayList<String> resultList = new ArrayList<>();
+    //goodsList 用于保存所有商品并更新
+    private ArrayList<GoodsPO> resultList = new ArrayList<>();
 
     @Override
     public ResultMessage add(GoodsPO po) {
-        if(!goodsList.contains(po))
+        if(contains(po))
             return ResultMessage.Fail;
         HQLTools.add(po);
         goodsList.add(po);
@@ -24,7 +24,7 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
 
     @Override
     public ResultMessage delete(GoodsPO po) {
-        if(!goodsList.contains(po))
+        if(!contains(po))
             return ResultMessage.Fail;
         HQLTools.delete(po);
         goodsList.remove(po);
@@ -34,6 +34,8 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
     @Override
     public ResultMessage update(GoodsPO po) {
         // throw warning
+        if(!contains(po))
+            return ResultMessage.Fail;
         HQLTools.update(po);
         goodsList = (ArrayList<GoodsPO>)HQLTools.find(operation);
         return ResultMessage.Success;
@@ -45,10 +47,21 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
     }
 
     @Override
-    public ArrayList<GoodsPO> find(String keywords) {
+    public ArrayList<GoodsPO> find(String number, String name, String type) {
+        String operation = "from Goods where number = '" + number +
+                "' and name like '%" + name + "%' and type like '%" + type + "%'";
+        resultList = (ArrayList<GoodsPO>) HQLTools.find(operation);
         // Ought to be discussed
-        return null;
+        return resultList;
     }
-    
+    public boolean contains(GoodsPO po){
+        if(goodsList.size() > 0){
+            for(int i = 0; i < goodsList.size(); i++){
+                if(goodsList.get(i).getNumber().equals(po.getNumber()))
+                    return true;
+            }
+        }
+        return false;
+    }
 
 }

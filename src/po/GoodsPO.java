@@ -1,9 +1,9 @@
 package po;
 
-import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Column;
+import java.io.Serializable;
 /**
  * Created by py on 2017/10/18.
  */
@@ -37,10 +37,8 @@ public class GoodsPO implements Serializable{
     }
 
     @Id
-    public String getNumber(){
-        return number;
-    }
-
+    @Column(length = 50)
+    public String getNumber(){ return number; }
     public void setNumber(String number){
         this.number = number;
     }
@@ -79,12 +77,14 @@ public class GoodsPO implements Serializable{
     public void setRetailPrice(int retailPrice){
         this.retailPrice = retailPrice;
     }
+
     public int getRecentPurPrice(){
         return recentPurPrice;
     }
     public void setRecentPurPrice(int recentPurPrice){
         this.recentPurPrice = recentPurPrice;
     }
+
     public int getRecentRetPrice(){
         return recentRetPrice;
     }
