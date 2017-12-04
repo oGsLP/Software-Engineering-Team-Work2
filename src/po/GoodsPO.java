@@ -1,6 +1,5 @@
 package po;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -9,19 +8,44 @@ import java.io.Serializable;
  */
 @Entity(name = "Goods")
 
-public class GoodsPO implements Serializable{
+public class GoodsPO implements Serializable {
 
+    /**
+     *商品编号
+     */
     private String number;
+    /**
+     * 商品名称
+     */
     private String name;
+    /**
+     * 商品类型
+     */
     private String type;
+    /**
+     * 库存数量
+     */
     private long commodityNum;
+    /**
+     *进价
+     */
     private int purchasePrice;
+    /**
+     * 零售价
+     */
     private int retailPrice;
+    /**
+     *最近进价
+     */
     private int recentPurPrice;
+    /**
+     **最近零售价
+     */
     private int recentRetPrice;
 
-    public GoodsPO(String number, String name, String type, long commodityNum, int purchasePrice,
-                   int retailPrice, int recentPurPrice, int recentRetPrice){
+    public GoodsPO(String number, String name, String type, long commodityNum, int purchasePrice, int retailPrice,
+                   int recentPurPrice, int recentRetPrice) {
+        super();
         this.number = number;
         this.name = name;
         this.type = type;
@@ -37,59 +61,70 @@ public class GoodsPO implements Serializable{
     }
 
     @Id
-    @Column(length = 50)
-    public String getNumber(){ return number; }
-    public void setNumber(String number){
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
         this.number = number;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
-    public void setType(String type){
+
+    public void setType(String type) {
         this.type = type;
     }
 
-    public long getCommodityNum(){
+    public long getCommodityNum() {
         return commodityNum;
     }
-    public void setCommodityNum(long commodityNum){
+
+    public void setCommodityNum(long commodityNum) {
         this.commodityNum = commodityNum;
     }
 
-    public int getPurchasePrice(){
+    public int getPurchasePrice() {
         return purchasePrice;
     }
-    public void setPurchasePrice(int purchasePrice){
+
+    public void setPurchasePrice(int purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
-    public int getRetailPrice(){
+    public int getRetailPrice() {
         return retailPrice;
     }
-    public void setRetailPrice(int retailPrice){
+
+    public void setRetailPrice(int retailPrice) {
         this.retailPrice = retailPrice;
     }
 
-    public int getRecentPurPrice(){
+    public int getRecentPurPrice() {
         return recentPurPrice;
     }
-    public void setRecentPurPrice(int recentPurPrice){
+
+    public void setRecentPurPrice(int recentPurPrice) {
         this.recentPurPrice = recentPurPrice;
     }
 
-    public int getRecentRetPrice(){
+    public int getRecentRetPrice() {
         return recentRetPrice;
     }
-    public void setRecentRetPrice(int recentRetPrice){
-        this.recentPurPrice = recentRetPrice;
-    }
-}
 
+    public void setRecentRetPrice(int recentRetPrice) {
+        this.recentRetPrice = recentRetPrice;
+    }
+
+
+
+}
