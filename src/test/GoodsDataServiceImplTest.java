@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertEquals;
 public class GoodsDataServiceImplTest {
     GoodsDataServiceImpl goodsDataServiceImpl = new GoodsDataServiceImpl();
 
-    //@Test
+    @Test
     public void add() throws Exception {
         GoodsPO po = new GoodsPO("0005", "长管台灯", "Lamp-LP",
                 200, 15, 100, 18, 200);
@@ -25,7 +25,6 @@ public class GoodsDataServiceImplTest {
         assertEquals(msg, ResultMessage.Fail);
         //assertEquals(msg1, ResultMessage.Success);
         //assertEquals(msg2, ResultMessage.Success);
-   // 什么情况！
     }
 
     @Test
@@ -42,7 +41,7 @@ public class GoodsDataServiceImplTest {
         assertEquals(ResultMessage.Success, msg1);
     }
 
-    //@Test
+    @Test
     public void update() throws Exception {
         GoodsPO po = new GoodsPO("0005", "长管台灯", "Lamp-LP",
                 200, 15, 100, 18, 200);
