@@ -8,9 +8,19 @@ import service.dataservice.GoodsDataService;
 import java.util.ArrayList;
 
 public class GoodsDataServiceImpl implements GoodsDataService  {
+    /**
+     * sql 语句：从数据库中获得Goods信息
+     */
     String operation = "from Goods";
+
+    /**
+     *  goodsList 读取数据库中的goods信息，并随一次过程中更新自己，用内存换取效率
+     */
     private ArrayList<GoodsPO> goodsList = (ArrayList<GoodsPO>)HQLTools.find(operation);
-    //goodsList 用于保存所有商品并更新
+
+    /**
+     * resultList 存储单次查询的结果，不需要保存到数据库
+     */
     private ArrayList<GoodsPO> resultList = new ArrayList<>();
 
     @Override
@@ -41,6 +51,11 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
         return ResultMessage.Success;
     }
 
+    /**
+     * retrive 有必要则实现
+     * @param keywords
+     * @return
+     */
     @Override
     public ArrayList<GoodsPO> retrive(String keywords) {
         return null;
@@ -48,8 +63,11 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
 
     @Override
     public ArrayList<GoodsPO> find(String number, String name, String type) {
-        String operation = "from Goods where number = '" + number +
-                "' and name like '%" + name + "%' and type like '%" + type + "%'";
+        String operation = "";
+        if(number == "")
+            operation = "from Goods where name like '%" + name + "%' and type like '%" + type + "%'";
+        else
+            operation = "from Goods where number = '" + number + "'" ;
         resultList = (ArrayList<GoodsPO>) HQLTools.find(operation);
         // Ought to be discussed
         return resultList;

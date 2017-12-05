@@ -1,4 +1,4 @@
-package test;
+package test.datatest;
 
 import objects.ResultMessage;
 import org.junit.Test;
@@ -14,17 +14,23 @@ public class GoodsDataServiceImplTest {
 
     @Test
     public void add() throws Exception {
+
         GoodsPO po = new GoodsPO("0005", "长管台灯", "Lamp-LP",
                 200, 15, 100, 18, 200);
         ResultMessage msg = goodsDataServiceImpl.add(po);
-        assertEquals(msg, ResultMessage.Fail);
+        assertEquals(msg, ResultMessage.Success);
 
         GoodsPO po1 = new GoodsPO("0006", "短管台灯", "Lamp-SP",
                 200, 15, 100, 18, 200);
+        ResultMessage msg1 = goodsDataServiceImpl.add(po1);
 
-        assertEquals(msg, ResultMessage.Fail);
-        //assertEquals(msg1, ResultMessage.Success);
-        //assertEquals(msg2, ResultMessage.Success);
+        GoodsPO po2 = new GoodsPO("0001", "大台灯", "Lamp-L",
+                100, 20, 100, 18, 100);
+        ResultMessage msg2 = goodsDataServiceImpl.add(po2);
+
+        assertEquals(msg, ResultMessage.Success);
+        assertEquals(msg1, ResultMessage.Success);
+        assertEquals(msg2, ResultMessage.Success);
     }
 
     @Test
@@ -37,14 +43,14 @@ public class GoodsDataServiceImplTest {
         ResultMessage msg = goodsDataServiceImpl.delete(po1);
         ResultMessage msg1 = goodsDataServiceImpl.delete(po2);
 
-        assertEquals(ResultMessage.Success, msg);
-        assertEquals(ResultMessage.Success, msg1);
+        assertEquals(ResultMessage.Fail, msg);
+        assertEquals(ResultMessage.Fail, msg1);
     }
 
     @Test
     public void update() throws Exception {
         GoodsPO po = new GoodsPO("0005", "长管台灯", "Lamp-LP",
-                200, 15, 100, 18, 200);
+                200, 15, 100, 17, 200);
         GoodsPO po1 = new GoodsPO("0007", "不存在的台灯", "Lamp-NonExist",
                 200, 15, 100, 18, 200);
         ResultMessage msg = goodsDataServiceImpl.update(po);
@@ -59,10 +65,12 @@ public class GoodsDataServiceImplTest {
 
     @Test
     public void find() throws Exception {
-
-        String str = "0005 长管台灯 Lamp-LP 200 15 100 18 200";
+        /**
+         * 根据编号准确查找
+         */
+        String str = "0005 长管台灯 Lamp-LP 200 15 100 17 200";
         ArrayList list = goodsDataServiceImpl.find("0005","","");
-        ArrayList list1 = goodsDataServiceImpl.find("", "长管", "");
+        ArrayList list1 = goodsDataServiceImpl.find("", "长", "");
 
         GoodsPO po = (GoodsPO)list.get(0);
 
@@ -70,7 +78,7 @@ public class GoodsDataServiceImplTest {
                 po.getPurchasePrice() + " " + po.getRetailPrice() + " " + po.getRecentPurPrice()+ " " +
                 po.getRecentRetPrice();
         assertEquals(str, str1);
-        assertEquals(18, po.getRecentPurPrice());
+        assertEquals(17, po.getRecentPurPrice());
         assertEquals(200, po.getRecentRetPrice());
 
         GoodsPO po1 = (GoodsPO)list.get(0);
@@ -79,8 +87,18 @@ public class GoodsDataServiceImplTest {
                 po1.getPurchasePrice() + " " + po1.getRetailPrice() + " " + po1.getRecentPurPrice()+ " " +
                 po1.getRecentRetPrice();
         assertEquals(str2, str1);
-        assertEquals(18, po1.getRecentPurPrice());
+        assertEquals(17, po1.getRecentPurPrice());
         assertEquals(200, po1.getRecentRetPrice());
+
+        /**
+         * 根据名称和型号模糊查找
+         */
+        GoodsPO po2 = (GoodsPO) list1.get(0);
+        assertEquals(1, list1.size());
+        assertEquals("长管台灯", po.getName());
+        assertEquals("Lamp-LP", po.getType());
+        assertEquals(200, po.getCommodityNum());
+        assertEquals(17, po.getRecentPurPrice());
     }
 
 }

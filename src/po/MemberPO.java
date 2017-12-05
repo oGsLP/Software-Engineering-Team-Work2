@@ -1,11 +1,14 @@
 package po;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
  * Created by py on 2017/10/20.
  * 客户数据的类
  */
+@Entity(name = "Member")
 public class MemberPO implements Serializable{
     /**
      * 编号
@@ -71,6 +74,10 @@ public class MemberPO implements Serializable{
      */
     String managePerson;
 
+    public MemberPO() {
+
+    }
+
     public MemberPO(String number, String name, String memberClass, int level, String phoneNumber,
                     String address, String postcode, String mailAddress, long collectionLimit,
                     long collection, long payment, String managePerson) {
@@ -87,7 +94,7 @@ public class MemberPO implements Serializable{
         this.payment = payment;
         this.managePerson = managePerson;
     }
-
+    @Id
     public String getNumber() {
         return number;
     }
