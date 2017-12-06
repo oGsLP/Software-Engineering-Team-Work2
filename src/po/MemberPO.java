@@ -78,6 +78,21 @@ public class MemberPO implements Serializable{
 
     }
 
+    /**
+     *
+     * @param number
+     * @param name
+     * @param memberClass
+     * @param level
+     * @param phoneNumber
+     * @param address
+     * @param postcode
+     * @param mailAddress
+     * @param collectionLimit
+     * @param collection
+     * @param payment
+     * @param managePerson
+     */
     public MemberPO(String number, String name, String memberClass, int level, String phoneNumber,
                     String address, String postcode, String mailAddress, long collectionLimit,
                     long collection, long payment, String managePerson) {

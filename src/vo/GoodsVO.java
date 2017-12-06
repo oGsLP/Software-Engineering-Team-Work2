@@ -40,6 +40,17 @@ public class GoodsVO {
     public GoodsVO() {
     }
 
+    /**
+     *
+     * @param number
+     * @param name
+     * @param type
+     * @param commodityNum
+     * @param purchasePrice
+     * @param retailPrice
+     * @param recentPurPrice
+     * @param recentRetPrice
+     */
     public GoodsVO(String number, String name, String type, long commodityNum,
                    int purchasePrice, int retailPrice, int recentPurPrice, int recentRetPrice) {
         this.number = number;

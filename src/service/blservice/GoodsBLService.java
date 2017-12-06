@@ -2,16 +2,51 @@ package service.blservice;
 
 /**
  * Created by py on 2017/10/19.
+ * 为商品提供的服务
  */
 import objects.ResultMessage;
+import vo.ClassifyVO;
 import vo.GoodsVO;
+
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 public interface GoodsBLService {
-    public ResultMessage addGoods(GoodsVO vo);
-    public ResultMessage deleteGoods(GoodsVO vo);
-    public ResultMessage modifyGoods(GoodsVO vo);
-    public ArrayList<GoodsVO> findGoods(String keywords);
-    public ArrayList<GoodsVO> getGoods(String node); //To be updated, replace String.
+    /**
+     *增加商品
+     * @param vo
+     * @return
+     */
+    public ResultMessage addGoods(GoodsVO vo) throws RemoteException;
+
+    /**
+     *删除商品
+     * @param vo
+     * @return
+     */
+    public ResultMessage deleteGoods(GoodsVO vo) throws RemoteException;
+
+    /**
+     *修改商品
+     * @param vo
+     * @return
+     */
+    public ResultMessage updateGoods(GoodsVO vo) throws RemoteException;
+
+    /**
+     *根据商品编号精确查找，根据名称和型号提供模糊查找
+     * @param number
+     * @param name
+     * @param type
+     * @return
+     */
+    public ArrayList<GoodsVO> findGoods(String number, String name, String type) throws RemoteException;
+
+    /**
+     *获取一个商品分类下的所有商品
+     * @param vo
+     * @return
+     */
+    public ArrayList<GoodsVO> getGoods(ClassifyVO vo) throws RemoteException;
 
 
 
