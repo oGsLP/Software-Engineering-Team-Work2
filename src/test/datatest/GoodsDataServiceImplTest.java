@@ -66,7 +66,7 @@ public class GoodsDataServiceImplTest {
     @Test
     public void find() throws Exception {
         /**
-         * 根据编号准确查找
+         * 测试根据编号准确查找
          */
         String str = "0005 长管台灯 Lamp-LP 200 15 100 17 200";
         ArrayList list = goodsDataServiceImpl.find("0005","","");
@@ -90,8 +90,9 @@ public class GoodsDataServiceImplTest {
         assertEquals(17, po1.getRecentPurPrice());
         assertEquals(200, po1.getRecentRetPrice());
 
+
         /**
-         * 根据名称和型号模糊查找
+         * 测试根据名称和型号模糊查找
          */
         GoodsPO po2 = (GoodsPO) list1.get(0);
         assertEquals(1, list1.size());

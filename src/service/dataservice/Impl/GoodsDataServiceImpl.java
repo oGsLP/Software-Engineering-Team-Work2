@@ -46,6 +46,7 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
         // throw warning
         if(!contains(po))
             return ResultMessage.Fail;
+        
         HQLTools.update(po);
         goodsList = (ArrayList<GoodsPO>)HQLTools.find(operation);
         return ResultMessage.Success;

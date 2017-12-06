@@ -4,12 +4,32 @@ import java.util.ArrayList;
 
 /**
  * Created by py on 2017/10/20.
+ * 销售单的数据的类
  */
 public class SalePO {
+    /**
+     * 单据编号（XSD-yyyyMMdd-xxxxx）
+     */
     String number;
+
+    /**
+     * 客户（仅显示销售商）
+     */
     String retailer;
+
+    /**
+     * 业务员
+     */
     String salesman;
+
+    /**
+     * 操作员（当前登录系统的用户）
+     */
     String operator;
+
+    /**
+     * 仓库
+     */
     ArrayList<GoodsPO> goodsList;
     ArrayList<CommodityPO> commodityList;
     long price;
