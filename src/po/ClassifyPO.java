@@ -1,8 +1,6 @@
 package po;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -40,12 +38,11 @@ public class ClassifyPO implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    @OneToMany
 
+    @OneToMany(cascade = CascadeType.ALL)
     public Set<GoodsPO> getGoodsSet() {
         return goodsSet;
     }
-
     public void setGoodsSet(Set<GoodsPO> goodsSet) {
         this.goodsSet = goodsSet;
     }

@@ -46,6 +46,7 @@ public class GoodsBLServiceImpl implements GoodsBLService {
         for(int i = 0; i < poList.size(); i++){
         //    voList
         }
+        return voList;
     }
 
     @Override
