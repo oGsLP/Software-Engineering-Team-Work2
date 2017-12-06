@@ -36,6 +36,14 @@ public class ClassifyDataServiceImplTest {
 
     @Test
     public void add1() throws Exception {
+        ClassifyPO po = new ClassifyPO("不能添加的灯", null);
+        Set<GoodsPO> set = new HashSet<>();
+        GoodsPO po2 = new GoodsPO("0001", "大镁光灯灯", "Flash-L",
+                100, 20, 100, 18, 100);
+        set.add(po2);
+        ClassifyPO po3 = new ClassifyPO("镁光灯", set);
+        ResultMessage msg = classifyDataService.add(po3, po);
+        assertEquals(ResultMessage.Fail, msg);
 
     }
 
