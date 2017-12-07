@@ -1,9 +1,14 @@
 package service;
 
+import po.ClassifyPO;
 import po.GoodsPO;
 import po.MemberPO;
+import vo.ClassifyVO;
 import vo.GoodsVO;
 import vo.MemberVO;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 将VO转化为PO的类，统一方法为vo名 + "_to_" + po名（ vo, po名全小写 ）
@@ -36,6 +41,21 @@ public class VOChangeToPO {
         po.setCollection(vo.getCollection());
         po.setPayment(vo.getPayment());
         po.setManagePerson(vo.getManagePerson());
+        return po;
+    }
+
+    public ClassifyPO classifyvo_to_classifypo(ClassifyVO vo){
+        ClassifyPO po = new ClassifyPO();
+        po.setId(vo.getId());
+        po.setName(vo.getName());
+        Set<GoodsPO> poSet = new HashSet<>();
+        Set<GoodsVO> voSet = vo.goodsSet;
+
+        for(GoodsVO goodsVO: voSet) {
+            poSet.add(goodsvo_to_goodspo(goodsVO));
+        }
+        po.setGoodsSet(poSet);
+
         return po;
     }
 
