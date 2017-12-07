@@ -63,7 +63,7 @@ public class MemberDataServiceImpl implements MemberDataService{
     public boolean contains(MemberPO po){
         if(memberList.size() > 0){
             for(int i = 0; i < memberList.size(); i++){
-                if(memberList.get(i).getNumber().equals(po.getNumber()))
+                if(memberList.get(i).getNumber() == (po.getNumber()))
                     return true;
             }
         }

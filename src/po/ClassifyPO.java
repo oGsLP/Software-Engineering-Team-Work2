@@ -1,5 +1,7 @@
 package po;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -11,6 +13,10 @@ import java.util.Set;
  */
 @Entity(name = "Classify")
 public class ClassifyPO implements Serializable {
+    /**
+     * 分类id
+     */
+    public int id;
 
     /**
      * 分类名称
@@ -30,7 +36,26 @@ public class ClassifyPO implements Serializable {
         this.name = name;
         this.goodsSet = goodsSet;
     }
+
+    public ClassifyPO(int id, String name, Set<GoodsPO> goodsSet) {
+        this.id = id;
+        this.name = name;
+        this.goodsSet = goodsSet;
+    }
+
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
     public String getName() {
         return name;
     }

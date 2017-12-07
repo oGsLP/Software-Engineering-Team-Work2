@@ -1,6 +1,9 @@
 package po;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 /**
@@ -13,7 +16,7 @@ public class GoodsPO implements Serializable {
     /**
      *商品编号
      */
-    private String number;
+    private int number;
     /**
      * 商品名称
      */
@@ -43,7 +46,22 @@ public class GoodsPO implements Serializable {
      */
     private int recentRetPrice;
 
-    public GoodsPO(String number, String name, String type, long commodityNum, int purchasePrice, int retailPrice,
+    public GoodsPO() {
+        super();
+    }
+
+    public GoodsPO(String name, String type, long commodityNum, int purchasePrice, int retailPrice,
+            int recentPurPrice, int recentRetPrice) {
+        this.name = name;
+        this.type = type;
+        this.commodityNum = commodityNum;
+        this.purchasePrice = purchasePrice;
+        this.retailPrice = retailPrice;
+        this.recentPurPrice = recentPurPrice;
+        this.recentRetPrice = recentRetPrice;
+    }
+
+    public GoodsPO(int number, String name, String type, long commodityNum, int purchasePrice, int retailPrice,
                    int recentPurPrice, int recentRetPrice) {
         super();
         this.number = number;
@@ -56,16 +74,16 @@ public class GoodsPO implements Serializable {
         this.recentRetPrice = recentRetPrice;
     }
 
-    public GoodsPO() {
-        super();
-    }
 
     @Id
-    public String getNumber() {
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

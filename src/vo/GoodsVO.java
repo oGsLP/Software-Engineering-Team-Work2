@@ -7,7 +7,7 @@ public class GoodsVO {
     /**
      *商品编号
      */
-    private String number;
+    private int number;
     /**
      * 商品名称
      */
@@ -51,7 +51,7 @@ public class GoodsVO {
      * @param recentPurPrice
      * @param recentRetPrice
      */
-    public GoodsVO(String number, String name, String type, long commodityNum,
+    public GoodsVO(int number, String name, String type, long commodityNum,
                    int purchasePrice, int retailPrice, int recentPurPrice, int recentRetPrice) {
         this.number = number;
         this.name = name;
@@ -63,11 +63,11 @@ public class GoodsVO {
         this.recentRetPrice = recentRetPrice;
     }
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

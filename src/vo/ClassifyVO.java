@@ -5,17 +5,17 @@ package vo;
  */
 public class ClassifyVO {
     String name;
-    String number;
+    int number;
 
 
-    public ClassifyVO(String name, String number){
+    public ClassifyVO(String name, int number){
         this.name = name;
         this.number = number;
     }
     public String getName(){
         return name;
     }
-    public String getNumber(){
+    public int getNumber(){
         return number;
     }
 }

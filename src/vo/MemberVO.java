@@ -7,7 +7,7 @@ public class MemberVO {
     /**
      * 编号
      */
-    String number;
+    int number;
 
     /**
      * 姓名
@@ -71,7 +71,7 @@ public class MemberVO {
     public MemberVO() {
     }
 
-    public MemberVO(String number, String name, String memberClass, int level, String phoneNumber,
+    public MemberVO(int number, String name, String memberClass, int level, String phoneNumber,
                     String address, String postcode, String mailAddress, long collectionLimit,
                     long collection, long payment, String managePerson) {
         this.number = number;
@@ -88,11 +88,11 @@ public class MemberVO {
         this.managePerson = managePerson;
     }
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

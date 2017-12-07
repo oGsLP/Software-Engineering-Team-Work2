@@ -1,6 +1,9 @@
 package po;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
@@ -13,7 +16,7 @@ public class MemberPO implements Serializable{
     /**
      * 编号
      */
-    String number;
+    int number;
 
     /**
      * 姓名
@@ -78,6 +81,23 @@ public class MemberPO implements Serializable{
 
     }
 
+
+    public MemberPO(String name, String memberClass, int level, String phoneNumber,
+                    String address, String postcode, String mailAddress, long collectionLimit,
+                    long collection, long payment, String managePerson) {
+        this.name = name;
+        this.memberClass = memberClass;
+        this.level = level;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.postcode = postcode;
+        this.mailAddress = mailAddress;
+        this.collectionLimit = collectionLimit;
+        this.collection = collection;
+        this.payment = payment;
+        this.managePerson = managePerson;
+    }
+
     /**
      *
      * @param number
@@ -93,7 +113,7 @@ public class MemberPO implements Serializable{
      * @param payment
      * @param managePerson
      */
-    public MemberPO(String number, String name, String memberClass, int level, String phoneNumber,
+    public MemberPO(int number, String name, String memberClass, int level, String phoneNumber,
                     String address, String postcode, String mailAddress, long collectionLimit,
                     long collection, long payment, String managePerson) {
         this.number = number;
@@ -110,11 +130,14 @@ public class MemberPO implements Serializable{
         this.managePerson = managePerson;
     }
     @Id
-    public String getNumber() {
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

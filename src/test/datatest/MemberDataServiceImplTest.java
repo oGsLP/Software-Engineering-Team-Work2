@@ -13,7 +13,7 @@ public class MemberDataServiceImplTest {
     MemberDataServiceImpl memberDataService = new MemberDataServiceImpl();
     @Test
     public void add() throws Exception {
-        MemberPO po = new MemberPO("0002", "pgZero", "销售商", 5,
+        MemberPO po = new MemberPO(2, "pgZero", "销售商", 5,
                 "00008001", "NJU", "210000", "pgzero@gmail.com",
                 20000, 3000, 100, "积尘");
         ResultMessage msg = memberDataService.add(po);
@@ -22,13 +22,13 @@ public class MemberDataServiceImplTest {
         ResultMessage msg1 = memberDataService.add(po);
         assertEquals(ResultMessage.Fail, msg1);
 
-        MemberPO po1 = new MemberPO("0003", "XiaoYunfan", "销售商", 5,
+        MemberPO po1 = new MemberPO(3, "XiaoYunfan", "销售商", 5,
                 "00008002", "NJU", "210000", "XiaoYunfan@163.com",
                 10000, 2000, 1000, "积尘");
         ResultMessage msg2 = memberDataService.add(po1);
         assertEquals(ResultMessage.Success, msg2);
 
-        MemberPO po2 = new MemberPO("0004", "XiongYiHeng", "销售商", 5,
+        MemberPO po2 = new MemberPO(4, "XiongYiHeng", "销售商", 5,
                 "00008003", "NJU", "210000", "XiongYiheng@qq.com",
                 10000, 2000, 1000, "积尘");
         ResultMessage msg3 = memberDataService.add(po2);
@@ -39,7 +39,7 @@ public class MemberDataServiceImplTest {
 
     @Test
     public void delete() throws Exception {
-        MemberPO po = new MemberPO("0002", "pgZero", "销售商", 5,
+        MemberPO po = new MemberPO(2, "pgZero", "销售商", 5,
                 "00008001", "NJU", "210000", "pgzero@gmail.com",
                 20000, 3000, 100, "积尘");
         ResultMessage msg = memberDataService.delete(po);
@@ -49,7 +49,7 @@ public class MemberDataServiceImplTest {
         assertEquals(ResultMessage.Fail, msg1);
 
 
-        MemberPO po2 = new MemberPO("0004", "XiongYiHeng", "销售商", 5,
+        MemberPO po2 = new MemberPO(4, "XiongYiHeng", "销售商", 5,
                 "00008003", "NJU", "210000", "XiongYiheng@qq.com",
                 10000, 2000, 1000, "积尘");
         ResultMessage msg3 = memberDataService.delete(po2);
@@ -58,7 +58,7 @@ public class MemberDataServiceImplTest {
 
     @Test
     public void update() throws Exception {
-        MemberPO po = new MemberPO("0003", "XiaoYunfan", "销售商", 4,
+        MemberPO po = new MemberPO(3, "XiaoYunfan", "销售商", 4,
                 "00008003", "NJU", "210000", "XiaoYunfan@qq.com",
                 10000, 2000, 1000, "积尘");
         ResultMessage msg = memberDataService.update(po);

@@ -76,7 +76,7 @@ public class GoodsDataServiceImpl implements GoodsDataService  {
     public boolean contains(GoodsPO po){
         if(goodsList.size() > 0){
             for(int i = 0; i < goodsList.size(); i++){
-                if(goodsList.get(i).getNumber().equals(po.getNumber()))
+                if(goodsList.get(i).getNumber() == (po.getNumber()))
                     return true;
             }
         }
