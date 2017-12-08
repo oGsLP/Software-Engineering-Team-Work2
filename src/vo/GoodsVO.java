@@ -5,7 +5,7 @@ package vo;
  */
 public class GoodsVO {
     /**
-     *商品编号
+     * 商品编号
      */
     private int number;
     /**
@@ -21,21 +21,21 @@ public class GoodsVO {
      */
     private long commodityNum;
     /**
-     *进价
+     * 进价
      */
-    private int purchasePrice;
+    private double purchasePrice;
     /**
      * 零售价
      */
-    private int retailPrice;
+    private double retailPrice;
     /**
-     *最近进价
+     * 最近进价
      */
-    private int recentPurPrice;
+    private double recentPurPrice;
     /**
-     **最近零售价
+     * *最近零售价
      */
-    private int recentRetPrice;
+    private double recentRetPrice;
 
     public GoodsVO() {
     }
@@ -52,7 +52,7 @@ public class GoodsVO {
      * @param recentRetPrice
      */
     public GoodsVO(int number, String name, String type, long commodityNum,
-                   int purchasePrice, int retailPrice, int recentPurPrice, int recentRetPrice) {
+                   double purchasePrice, double retailPrice, double recentPurPrice, double recentRetPrice) {
         this.number = number;
         this.name = name;
         this.type = type;
@@ -95,35 +95,35 @@ public class GoodsVO {
         this.commodityNum = commodityNum;
     }
 
-    public int getPurchasePrice() {
+    public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    public void setPurchasePrice(int purchasePrice) {
+    public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
-    public int getRetailPrice() {
+    public double getRetailPrice() {
         return retailPrice;
     }
 
-    public void setRetailPrice(int retailPrice) {
+    public void setRetailPrice(double retailPrice) {
         this.retailPrice = retailPrice;
     }
 
-    public int getRecentPurPrice() {
+    public double getRecentPurPrice() {
         return recentPurPrice;
     }
 
-    public void setRecentPurPrice(int recentPurPrice) {
+    public void setRecentPurPrice(double recentPurPrice) {
         this.recentPurPrice = recentPurPrice;
     }
 
-    public int getRecentRetPrice() {
+    public double getRecentRetPrice() {
         return recentRetPrice;
     }
 
-    public void setRecentRetPrice(int recentRetPrice) {
+    public void setRecentRetPrice(double recentRetPrice) {
         this.recentRetPrice = recentRetPrice;
     }
 }
