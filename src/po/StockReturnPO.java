@@ -9,11 +9,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by py on 2017/10/20.
- * 进货单数据类
+ * 进货退货数据类
  */
-@Entity(name = "Stock")
-public class StockPO implements Serializable {
+@Entity(name = "StockReturn")
+public class StockReturnPO implements Serializable {
     /**
      * 单据编号
      */
@@ -38,7 +37,7 @@ public class StockPO implements Serializable {
     /**
      * 仓库
      */
-    int commodityNumber;
+    int commodityNum;
 
     /**
      * 操作员
@@ -48,7 +47,7 @@ public class StockPO implements Serializable {
     /**
      * 入库商品
      */
-    Set<GoodsStockPO> stockSet = new HashSet<>();
+    Set<GoodsStockReturnPO> stockSet = new HashSet<>();
     /**
      * 备注
      */
@@ -59,17 +58,16 @@ public class StockPO implements Serializable {
      */
     double totalPrice;
 
-    public StockPO() {
+    public StockReturnPO() {
     }
 
-
-    public StockPO(String number, String date, int receiptNum, String provider, int commodityNumber,
-                   String operator, Set<GoodsStockPO> stockSet, String remark, double totalPrice) {
+    public StockReturnPO(String number, String date, int receiptNum, String provider, int commodityNum,
+                         String operator, Set<GoodsStockReturnPO> stockSet, String remark, double totalPrice) {
         this.number = number;
         this.date = date;
         this.receiptNum = receiptNum;
         this.provider = provider;
-        this.commodityNumber = commodityNumber;
+        this.commodityNum = commodityNum;
         this.operator = operator;
         this.stockSet = stockSet;
         this.remark = remark;
@@ -109,12 +107,12 @@ public class StockPO implements Serializable {
         this.provider = provider;
     }
 
-    public int getCommodityNumber() {
-        return commodityNumber;
+    public int getCommodityNum() {
+        return commodityNum;
     }
 
-    public void setCommodityNumber(int commodityNumber) {
-        this.commodityNumber = commodityNumber;
+    public void setCommodityNum(int commodityNum) {
+        this.commodityNum = commodityNum;
     }
 
     public String getOperator() {
@@ -126,11 +124,11 @@ public class StockPO implements Serializable {
     }
 
     @OneToMany(cascade = CascadeType.ALL)
-    public Set<GoodsStockPO> getStockSet() {
+    public Set<GoodsStockReturnPO> getStockSet() {
         return stockSet;
     }
 
-    public void setStockSet(Set<GoodsStockPO> stockSet) {
+    public void setStockSet(Set<GoodsStockReturnPO> stockSet) {
         this.stockSet = stockSet;
     }
 
@@ -149,4 +147,5 @@ public class StockPO implements Serializable {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
+
 }

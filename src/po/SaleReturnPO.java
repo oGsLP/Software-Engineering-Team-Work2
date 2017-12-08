@@ -9,13 +9,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by py on 2017/10/20.
- * 销售单的数据的类
+ * 销售退货的数据类
  */
-@Entity(name = "Sale")
-public class SalePO implements Serializable{
+@Entity(name = "SaleReturn")
+public class SaleReturnPO implements Serializable{
     /**
-     * 单据编号（XSD-yyyyMMdd-xxxxx）
+     * 单据编号（XSTHD-yyyyMMdd-xxxxx）
      */
     String number;
 
@@ -53,7 +52,7 @@ public class SalePO implements Serializable{
     /**
      * 出货商品
      */
-    Set<GoodsSalePO> saleSet = new HashSet<>();
+    Set<GoodsSaleReturnPO> saleReturnSet = new HashSet<>();
 
     /**
      * 折让前总额
@@ -65,10 +64,6 @@ public class SalePO implements Serializable{
      */
     private double discount;
 
-    /**
-     * 代金券金额
-     */
-    private double voucher;
 
     /**
      * 折让后总额
@@ -80,7 +75,7 @@ public class SalePO implements Serializable{
      */
     String remark;
 
-    public SalePO() {
+    public SaleReturnPO() {
     }
 
     /**
@@ -92,16 +87,15 @@ public class SalePO implements Serializable{
      * @param salesman
      * @param operator
      * @param commodityNumber
-     * @param saleSet
+     * @param saleReturnSet
      * @param totalPrice
      * @param discount
-     * @param voucher
      * @param payPrice
      * @param remark
      */
-    public SalePO(String number, String date, int receiptNum, String retailer,
-                  String salesman, String operator, int commodityNumber, Set<GoodsSalePO> saleSet,
-                  double totalPrice, double discount, double voucher, double payPrice, String remark) {
+    public SaleReturnPO(String number, String date, int receiptNum, String retailer,
+                  String salesman, String operator, int commodityNumber, Set<GoodsSaleReturnPO> saleReturnSet,
+                  double totalPrice, double discount, double payPrice, String remark) {
         this.number = number;
         this.date = date;
         this.receiptNum = receiptNum;
@@ -109,10 +103,9 @@ public class SalePO implements Serializable{
         this.salesman = salesman;
         this.operator = operator;
         this.commodityNumber = commodityNumber;
-        this.saleSet = saleSet;
+        this.saleReturnSet = saleReturnSet;
         this.totalPrice = totalPrice;
         this.discount = discount;
-        this.voucher = voucher;
         this.payPrice = payPrice;
         this.remark = remark;
     }
@@ -175,12 +168,12 @@ public class SalePO implements Serializable{
     }
 
     @OneToMany(cascade = CascadeType.ALL)
-    public Set<GoodsSalePO> getSaleSet() {
-        return saleSet;
+    public Set<GoodsSaleReturnPO> getSaleSet() {
+        return saleReturnSet;
     }
 
-    public void setSaleSet(Set<GoodsSalePO> saleSet) {
-        this.saleSet = saleSet;
+    public void setSaleSet(Set<GoodsSaleReturnPO> saleSet) {
+        this.saleReturnSet = saleSet;
     }
 
     public double getTotalPrice() {
@@ -199,14 +192,6 @@ public class SalePO implements Serializable{
         this.discount = discount;
     }
 
-    public double getVoucher() {
-        return voucher;
-    }
-
-    public void setVoucher(double voucher) {
-        this.voucher = voucher;
-    }
-
     public double getPayPrice() {
         return payPrice;
     }
@@ -223,4 +208,3 @@ public class SalePO implements Serializable{
         this.remark = remark;
     }
 }
-

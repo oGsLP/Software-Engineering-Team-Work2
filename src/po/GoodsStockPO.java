@@ -14,7 +14,7 @@ public class GoodsStockPO implements Serializable{
      */
     public int id;
     /**
-     * 对应进货的商品
+     * 对应进货的商品类
      */
     public GoodsPO po;
 
