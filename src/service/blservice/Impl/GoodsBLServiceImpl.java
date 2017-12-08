@@ -1,23 +1,24 @@
 package service.blservice.Impl;
 
+import objects.POtoVO;
 import objects.ResultMessage;
-import po.ClassifyPO;
 import po.GoodsPO;
 import service.VOChangeToPO;
 import service.blservice.GoodsBLService;
 import service.datafactory.DataFactory;
 import service.datafactory.DataFactoryImpl;
-import vo.ClassifyVO;
 import vo.GoodsVO;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-import java.util.Set;
 
 public class GoodsBLServiceImpl implements GoodsBLService {
     DataFactory dataFactory = new DataFactoryImpl();
+    /**
+     * po to vo and vo to po
+     */
     VOChangeToPO voChangeToPO = new VOChangeToPO();
-
+    POtoVO potoVO = new POtoVO();
     @Override
     public ResultMessage addGoods(GoodsVO vo) throws RemoteException {
         GoodsPO po = voChangeToPO.goodsvo_to_goodspo(vo);
@@ -54,34 +55,10 @@ public class GoodsBLServiceImpl implements GoodsBLService {
         if(poList.size() == 0)
             return null;
         for(int i = 0; i < poList.size(); i++){
-                voList.add(po_to_vo(poList.get(i)));
+                voList.add(potoVO.goodspo_to_goodsvo(poList.get(i)));
         }
         return voList;
     }
 
-    @Override
-    public ArrayList<GoodsVO> getGoods(ClassifyVO vo) throws RemoteException {
-        ArrayList<GoodsVO> goodsList = new ArrayList<>();
-
-        ClassifyPO po = voChangeToPO.classifyvo_to_classifypo(vo);
-        Set<GoodsPO> set = po.getGoodsSet();
-        for(GoodsPO goodsPO:set){
-            goodsList.add(po_to_vo(goodsPO));
-        }
-        return goodsList;
-    }
-
-    private GoodsVO po_to_vo(GoodsPO po){
-        GoodsVO vo = new GoodsVO();
-        vo.setNumber(po.getNumber());
-        vo.setName(po.getName());
-        vo.setType(po.getType());
-        vo.setCommodityNum(po.getCommodityNum());
-        vo.setPurchasePrice(po.getPurchasePrice());
-        vo.setRetailPrice(po.getRetailPrice());
-        vo.setRecentPurPrice(po.getPurchasePrice());
-        vo.setRecentRetPrice(po.getRecentRetPrice());
-        return vo;
-    }
 
 }

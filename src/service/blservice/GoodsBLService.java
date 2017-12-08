@@ -5,7 +5,6 @@ package service.blservice;
  * 为商品提供的服务
  */
 import objects.ResultMessage;
-import vo.ClassifyVO;
 import vo.GoodsVO;
 
 import java.rmi.RemoteException;
@@ -40,13 +39,6 @@ public interface GoodsBLService {
      * @return
      */
     public ArrayList<GoodsVO> findGoods(String number, String name, String type) throws RemoteException;
-
-    /**
-     *获取一个商品分类下的所有商品
-     * @param vo
-     * @return
-     */
-    public ArrayList<GoodsVO> getGoods(ClassifyVO vo) throws RemoteException;
 
 
 
