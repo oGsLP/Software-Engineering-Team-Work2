@@ -1,15 +1,17 @@
 package objects;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * @author py 执行HQL的工具类，封装HQL查询语句
+ * Created by py on 2017/12/1.
+ * py 执行HQL的工具类，封装HQL查询语句
  */
 public class HQLTools {
     /**
@@ -18,7 +20,7 @@ public class HQLTools {
     private static Configuration configuration = new Configuration()
             .addInputStream(HQLTools.class.getResourceAsStream("/hibernate.cfg.xml")).configure();
 
-    // = new Configuration().configure(new File("hibernate.cfg.xml"));//跑测试用这个
+    // = new Configuration().configure(new File("hibernate.cfg.xml"));//for test? or just check the database
     /**
      * SessionFactory对象
      */
@@ -100,7 +102,7 @@ public class HQLTools {
     /**
      * 删除方法
      *
-     * @param objToAdd
+     * @param objToDelete
      *            需要删除的对象ArrayList<T>
      * @return 删除结果
      */
@@ -143,7 +145,7 @@ public class HQLTools {
     /**
      * 更新方法
      *
-     * @param objToAdd
+     * @param objToUpdate
      *            需要更新的对象ArrayList<T>
      * @return 更新结果
      */
