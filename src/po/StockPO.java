@@ -69,6 +69,7 @@ public class StockPO implements Serializable {
         this.remark = remark;
         this.totalPrice = totalPrice;
     }
+
     @Id
     public String getNumber() {
         return number;
