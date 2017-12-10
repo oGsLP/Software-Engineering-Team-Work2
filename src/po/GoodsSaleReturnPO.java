@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import java.io.Serializable;
 /**
- * 封装了一个商品销售退货的类，包括商品编号和商品
+ * 封装了一个商品销售退货的类，包括商品编号和商品，总金额和备注
  */
 @Entity(name = "GoodsSaleReturn")
 public class GoodsSaleReturnPO implements Serializable {
@@ -24,13 +24,31 @@ public class GoodsSaleReturnPO implements Serializable {
      */
     private int saleReturnNumber;
 
+    /**
+     * 对应销售退货商品价格
+     */
+    public double price;
+
+    /**
+     * 备注
+     */
+    String remark;
+
+    /**
+     * 总额
+     */
+    double totalPrice;
+
     public GoodsSaleReturnPO() {
     }
 
-    public GoodsSaleReturnPO(int id, GoodsPO po, int saleReturnNumber) {
+    public GoodsSaleReturnPO(int id, GoodsPO po, int saleReturnNumber, double price, String remark, double totalPrice) {
         this.id = id;
         this.po = po;
         this.saleReturnNumber = saleReturnNumber;
+        this.price = price;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
     }
 
     @Id
@@ -41,6 +59,7 @@ public class GoodsSaleReturnPO implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
+
     @OneToOne
     public GoodsPO getPo() {
         return po;
@@ -56,5 +75,29 @@ public class GoodsSaleReturnPO implements Serializable {
 
     public void setSaleReturnNumber(int saleReturnNumber) {
         this.saleReturnNumber = saleReturnNumber;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

@@ -37,13 +37,16 @@
         <mapping class = "po.ClassifyPO" />
         <mapping class = "po.CommodityPO"/>
         <mapping class = "po.MemberPO" />
-        <mapping class = "po.ReturnPO" />
+        <mapping class = "po.RestockPO" />
         <mapping class = "po.SalePO" />
+        <mapping class = "po.SaleReturnPO"/>
         <mapping class = "po.StockPO" />
+        <mapping class = "po.StockReturnPO"/>
         <mapping class = "po.GoodsStockPO"/>
         <mapping class = "po.GoodsStockReturnPO"/>
         <mapping class = "po.GoodsSalePO"/>
         <mapping class = "po.GoodsSaleReturnPO"/>
-
+        <mapping class = "po.UserPO"/>
+        <mapping class = "po.AdminPO"/>
     </session-factory>
 </hibernate-configuration>

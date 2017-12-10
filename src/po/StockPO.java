@@ -28,7 +28,7 @@ public class StockPO implements Serializable {
      * 当天单据号码
      */
 
-    int receiptNum;
+    int receiptNumber;
 
     /**
      * 供应商
@@ -49,25 +49,37 @@ public class StockPO implements Serializable {
      * 入库商品
      */
     Set<GoodsStockPO> stockSet = new HashSet<>();
+
     /**
      * 备注
      */
     String remark;
 
     /**
-     * 总额合计
+     * 总额
      */
     double totalPrice;
 
     public StockPO() {
     }
 
-
-    public StockPO(String number, String date, int receiptNum, String provider, int commodityNumber,
+    /**
+     *
+     * @param number
+     * @param date
+     * @param receiptNumber
+     * @param provider
+     * @param commodityNumber
+     * @param operator
+     * @param stockSet
+     * @param remark
+     * @param totalPrice
+     */
+    public StockPO(String number, String date, int receiptNumber, String provider, int commodityNumber,
                    String operator, Set<GoodsStockPO> stockSet, String remark, double totalPrice) {
         this.number = number;
         this.date = date;
-        this.receiptNum = receiptNum;
+        this.receiptNumber = receiptNumber;
         this.provider = provider;
         this.commodityNumber = commodityNumber;
         this.operator = operator;
@@ -93,12 +105,12 @@ public class StockPO implements Serializable {
         this.date = date;
     }
 
-    public int getReceiptNum() {
-        return receiptNum;
+    public int getReceiptNumber() {
+        return receiptNumber;
     }
 
-    public void setReceiptNum(int receiptNum) {
-        this.receiptNum = receiptNum;
+    public void setReceiptNumber(int receiptNumber) {
+        this.receiptNumber = receiptNumber;
     }
 
     public String getProvider() {

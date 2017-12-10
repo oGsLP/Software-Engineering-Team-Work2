@@ -28,7 +28,7 @@ public class SalePO implements Serializable{
     /**
      * 当天单据号码
      */
-    int receiptNum;
+    int receiptNumber;
 
     /**
      * 客户（仅显示销售商）
@@ -87,7 +87,7 @@ public class SalePO implements Serializable{
      *
      * @param number
      * @param date
-     * @param receiptNum
+     * @param receiptNumber
      * @param retailer
      * @param salesman
      * @param operator
@@ -99,12 +99,12 @@ public class SalePO implements Serializable{
      * @param payPrice
      * @param remark
      */
-    public SalePO(String number, String date, int receiptNum, String retailer,
+    public SalePO(String number, String date, int receiptNumber, String retailer,
                   String salesman, String operator, int commodityNumber, Set<GoodsSalePO> saleSet,
                   double totalPrice, double discount, double voucher, double payPrice, String remark) {
         this.number = number;
         this.date = date;
-        this.receiptNum = receiptNum;
+        this.receiptNumber = receiptNumber;
         this.retailer = retailer;
         this.salesman = salesman;
         this.operator = operator;
@@ -134,12 +134,12 @@ public class SalePO implements Serializable{
         this.date = date;
     }
 
-    public int getReceiptNum() {
-        return receiptNum;
+    public int getReceiptNumber() {
+        return receiptNumber;
     }
 
-    public void setReceiptNum(int receiptNum) {
-        this.receiptNum = receiptNum;
+    public void setReceiptNumber(int receiptNum) {
+        this.receiptNumber = receiptNum;
     }
 
     public String getRetailer() {

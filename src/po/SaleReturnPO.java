@@ -27,7 +27,7 @@ public class SaleReturnPO implements Serializable{
     /**
      * 当天单据号码
      */
-    int receiptNum;
+    int receiptNumber;
 
     /**
      * 客户（仅显示销售商）
@@ -55,18 +55,7 @@ public class SaleReturnPO implements Serializable{
     Set<GoodsSaleReturnPO> saleReturnSet = new HashSet<>();
 
     /**
-     * 折让前总额
-     */
-    private double totalPrice;
-
-    /**
-     * 折让金额
-     */
-    private double discount;
-
-
-    /**
-     * 折让后总额
+     * 总额
      */
     private double payPrice;
 
@@ -82,30 +71,26 @@ public class SaleReturnPO implements Serializable{
      *
      * @param number
      * @param date
-     * @param receiptNum
+     * @param receiptNumber
      * @param retailer
      * @param salesman
      * @param operator
      * @param commodityNumber
      * @param saleReturnSet
-     * @param totalPrice
-     * @param discount
      * @param payPrice
      * @param remark
      */
-    public SaleReturnPO(String number, String date, int receiptNum, String retailer,
-                  String salesman, String operator, int commodityNumber, Set<GoodsSaleReturnPO> saleReturnSet,
-                  double totalPrice, double discount, double payPrice, String remark) {
+    public SaleReturnPO(String number, String date, int receiptNumber, String retailer, String salesman,
+                        String operator, int commodityNumber, Set<GoodsSaleReturnPO> saleReturnSet,
+                        double payPrice, String remark) {
         this.number = number;
         this.date = date;
-        this.receiptNum = receiptNum;
+        this.receiptNumber = receiptNumber;
         this.retailer = retailer;
         this.salesman = salesman;
         this.operator = operator;
         this.commodityNumber = commodityNumber;
         this.saleReturnSet = saleReturnSet;
-        this.totalPrice = totalPrice;
-        this.discount = discount;
         this.payPrice = payPrice;
         this.remark = remark;
     }
@@ -127,12 +112,12 @@ public class SaleReturnPO implements Serializable{
         this.date = date;
     }
 
-    public int getReceiptNum() {
-        return receiptNum;
+    public int getReceiptNumber() {
+        return receiptNumber;
     }
 
-    public void setReceiptNum(int receiptNum) {
-        this.receiptNum = receiptNum;
+    public void setReceiptNumber(int receiptNum) {
+        this.receiptNumber = receiptNum;
     }
 
     public String getRetailer() {
@@ -168,28 +153,12 @@ public class SaleReturnPO implements Serializable{
     }
 
     @OneToMany(cascade = CascadeType.ALL)
-    public Set<GoodsSaleReturnPO> getSaleSet() {
+    public Set<GoodsSaleReturnPO> getSaleReturnSet() {
         return saleReturnSet;
     }
 
-    public void setSaleSet(Set<GoodsSaleReturnPO> saleSet) {
-        this.saleReturnSet = saleSet;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public double getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(double discount) {
-        this.discount = discount;
+    public void setSaleReturnSet(Set<GoodsSaleReturnPO> saleReturnSet) {
+        this.saleReturnSet = saleReturnSet;
     }
 
     public double getPayPrice() {
