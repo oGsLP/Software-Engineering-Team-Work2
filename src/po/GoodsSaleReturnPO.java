@@ -37,7 +37,7 @@ public class GoodsSaleReturnPO implements Serializable {
     /**
      * 总额
      */
-    double totalPrice;
+    double totalPrice = price * saleReturnNumber;
 
     public GoodsSaleReturnPO() {
     }

@@ -33,7 +33,7 @@ public class GoodsStockReturnPO implements Serializable {
     /**
      * 总额
      */
-    double totalPrice;
+    double totalPrice = stockReturnNumber * po.getPurchasePrice();
 
     public GoodsStockReturnPO() {
     }

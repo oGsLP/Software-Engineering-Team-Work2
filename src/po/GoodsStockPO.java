@@ -33,7 +33,7 @@ public class GoodsStockPO implements Serializable{
     /**
      * 总额合计
      */
-    double totalPrice;
+    double totalPrice = po.getPurchasePrice() * stockNumber;
 
 
     public GoodsStockPO() {

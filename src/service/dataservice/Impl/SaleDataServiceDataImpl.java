@@ -1,41 +1,39 @@
 package service.dataservice.Impl;
 
+import objects.HQLTools;
 import objects.ResultMessage;
-import po.CommodityPO;
 import po.SalePO;
 import service.dataservice.SaleDataService;
-
-import java.util.ArrayList;
 
 public class SaleDataServiceDataImpl implements SaleDataService{
 
     @Override
     public ResultMessage add(SalePO po) {
-        return null;
+        if(po == null)
+            return ResultMessage.Fail;
+        HQLTools.add(po);
+        return ResultMessage.Success;
     }
 
     @Override
-    public ResultMessage remove(SalePO po) {
-        return null;
+    public ResultMessage delete(SalePO po) {
+        if(po == null)
+            return ResultMessage.Fail;
+        HQLTools.delete(po);
+        return ResultMessage.Success;
     }
 
     @Override
-    public ResultMessage modify(SalePO po) {
-        return null;
+    public ResultMessage update(SalePO po) {
+        if(po != null)
+            return ResultMessage.Fail;
+        HQLTools.update(po);
+        return ResultMessage.Success;
     }
 
     @Override
-    public ArrayList<SalePO> getReceipt(SalePO po) {
-        return null;
+    public double calculatePrice(SalePO po) {
+        return 0;
     }
 
-    @Override
-    public CommodityPO returnCom(CommodityPO po, ArrayList<SalePO> receipt) {
-        return null;
-    }
-
-    @Override
-    public ResultMessage changeMoney(SalePO po) {
-        return null;
-    }
 }

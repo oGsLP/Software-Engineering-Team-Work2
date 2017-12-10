@@ -40,7 +40,7 @@ public class GoodsSalePO implements Serializable {
     /**
      * 总额
      */
-    double totalPrice;
+    double totalPrice = price * saleNumber;
 
     public GoodsSalePO() {
     }
