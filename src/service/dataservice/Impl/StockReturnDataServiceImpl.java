@@ -2,13 +2,16 @@ package service.dataservice.Impl;
 
 import objects.HQLTools;
 import objects.ResultMessage;
-import po.SalePO;
-import service.dataservice.SaleDataService;
+import po.StockReturnPO;
+import service.dataservice.StockReturnDataService;
 
-public class SaleDataServiceDataImpl implements SaleDataService{
+/**
+ * 库存退货单的数据类
+ */
+public class StockReturnDataServiceImpl implements StockReturnDataService {
 
     @Override
-    public ResultMessage add(SalePO po) {
+    public ResultMessage add(StockReturnPO po) {
         if(po == null)
             return ResultMessage.Fail;
         HQLTools.add(po);
@@ -16,7 +19,7 @@ public class SaleDataServiceDataImpl implements SaleDataService{
     }
 
     @Override
-    public ResultMessage delete(SalePO po) {
+    public ResultMessage delete(StockReturnPO po) {
         if(po == null)
             return ResultMessage.Fail;
         HQLTools.delete(po);
@@ -24,16 +27,10 @@ public class SaleDataServiceDataImpl implements SaleDataService{
     }
 
     @Override
-    public ResultMessage update(SalePO po) {
-        if(po != null)
+    public ResultMessage update(StockReturnPO po) {
+        if(po == null)
             return ResultMessage.Fail;
         HQLTools.update(po);
         return ResultMessage.Success;
     }
-
-    @Override
-    public double calculatePrice(SalePO po) {
-        return 0;
-    }
-
 }

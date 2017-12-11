@@ -30,10 +30,6 @@ public interface SaleDataService {
 
 
     /**
-     * 计算销售退货商品价格
-     * @param po
-     * @return
+     * 审批单据后更改等待PGZERO
      */
-   public double calculatePrice(SalePO po);
-
 }

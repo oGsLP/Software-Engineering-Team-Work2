@@ -3,9 +3,10 @@ package service.dataservice.Impl;
 import objects.HQLTools;
 import objects.ResultMessage;
 import po.GoodsSalePO;
-import service.dataservice.GoodsSaleService;
+import service.dataservice.GoodsSaleDataService;
 
-public class GoodsSaleServiceImpl implements GoodsSaleService{
+public class GoodsSaleDataServiceImpl implements GoodsSaleDataService {
+
     @Override
     public ResultMessage add(GoodsSalePO po) {
         if(po == null)
@@ -16,13 +17,17 @@ public class GoodsSaleServiceImpl implements GoodsSaleService{
 
     @Override
     public ResultMessage delete(GoodsSalePO po) {
-        return null;
+        if(po == null)
+            return ResultMessage.Fail;
+        HQLTools.delete(po);
+        return ResultMessage.Success;
     }
 
     @Override
     public ResultMessage update(GoodsSalePO po) {
-        return null;
+        if(po == null)
+            return ResultMessage.Fail;
+        HQLTools.update(po);
+        return ResultMessage.Success;
     }
-
-
 }

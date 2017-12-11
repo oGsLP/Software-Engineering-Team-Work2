@@ -1,11 +1,7 @@
 package service;
 
-import po.ClassifyPO;
-import po.GoodsPO;
-import po.MemberPO;
-import vo.ClassifyVO;
-import vo.GoodsVO;
-import vo.MemberVO;
+import po.*;
+import vo.*;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -59,6 +55,27 @@ public class VOChangeToPO {
         return po;
     }
 
+    public GoodsStockPO goodsStockvo_to_goodsStockpo(GoodsStockVO vo){
+        GoodsStockPO po = new GoodsStockPO();
+        po.setId(vo.getId());
+        po.setStockNumber(vo.getStockNumber());
+        po.setPo(goodsvo_to_goodspo(vo.getVo()));
+        po.setRemark(vo.getRemark());
+        po.setTotalPrice(vo.getTotalPrice());
+        return po;
+    }
+
+    public GoodsSalePO goodsSalevo_to_goodsSalepo(GoodsSaleVO vo){
+        GoodsSalePO po = new GoodsSalePO();
+        po.setId(vo.getId());
+        po.setPo(goodsvo_to_goodspo(vo.getVo()));
+        po.setPrice(vo.getPrice());
+        po.setRemark(vo.getRemark());
+        po.setSaleNumber(vo.getSaleNumber());
+        po.setTotalPrice(vo.getTotalPrice());
+        return po;
+    }
+    
 
 
 }

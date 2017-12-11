@@ -2,12 +2,12 @@ package service.dataservice.Impl;
 
 import objects.HQLTools;
 import objects.ResultMessage;
-import po.StockPO;
-import service.dataservice.StockDataService;
+import po.SaleReturnPO;
+import service.dataservice.SaleReturnDataService;
 
-public class StockDataServiceImpl implements StockDataService {
+public class SaleReturnDataServiceImpl implements SaleReturnDataService{
     @Override
-    public ResultMessage add(StockPO po) {
+    public ResultMessage add(SaleReturnPO po) {
         if(po == null)
             return ResultMessage.Fail;
         HQLTools.add(po);
@@ -15,7 +15,7 @@ public class StockDataServiceImpl implements StockDataService {
     }
 
     @Override
-    public ResultMessage delete(StockPO po) {
+    public ResultMessage delete(SaleReturnPO po) {
         if(po == null)
             return ResultMessage.Fail;
         HQLTools.delete(po);
@@ -23,7 +23,7 @@ public class StockDataServiceImpl implements StockDataService {
     }
 
     @Override
-    public ResultMessage update(StockPO po) {
+    public ResultMessage update(SaleReturnPO po) {
         if(po == null)
             return ResultMessage.Fail;
         HQLTools.update(po);

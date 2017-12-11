@@ -3,7 +3,10 @@ package service.dataservice;
 import objects.ResultMessage;
 import po.GoodsSalePO;
 
-public interface GoodsSaleService {
+/**
+ * 销售商品数据的类
+ */
+public interface GoodsSaleDataService {
     /**
      * 增加销售商品
      * @param po
@@ -24,8 +27,6 @@ public interface GoodsSaleService {
      * @return
      */
     public ResultMessage update(GoodsSalePO po);
-
-
 
 
 }

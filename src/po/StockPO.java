@@ -88,6 +88,18 @@ public class StockPO implements Serializable {
         this.totalPrice = totalPrice;
     }
 
+    public StockPO(String provider, int commodityNumber, String operator, Set<GoodsStockPO> stockSet,
+                   String remark, double totalPrice) {
+        this.provider = provider;
+        this.commodityNumber = commodityNumber;
+        this.operator = operator;
+        this.stockSet = stockSet;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
+    }
+
+
+
     @Id
     public String getNumber() {
         return number;
@@ -104,6 +116,7 @@ public class StockPO implements Serializable {
     public void setDate(String date) {
         this.date = date;
     }
+
 
     public int getReceiptNumber() {
         return receiptNumber;
