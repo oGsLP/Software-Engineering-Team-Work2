@@ -1,12 +1,7 @@
 package service.datafactory;
 
-import service.dataservice.ClassifyDataService;
-import service.dataservice.CommodityDataService;
-import service.dataservice.GoodsDataService;
+import service.dataservice.*;
 import service.dataservice.Impl.*;
-import service.dataservice.MemberDataService;
-import service.dataservice.SaleDataService;
-import service.dataservice.StockDataService;
 
 
 public class DataFactoryImpl implements DataFactory{
@@ -35,20 +30,51 @@ public class DataFactoryImpl implements DataFactory{
     }
 
     @Override
-    public ReturnDataService getReturnDataService(){
-        ReturnDataService returnGoods = new ReturnDataServiceImpl();
-        return returnGoods;
+    public GoodsSaleDataService getGoodsSaleDataService() {
+        GoodsSaleDataService goodsSaleData = new GoodsSaleDataServiceImpl();
+        return goodsSaleData;
     }
 
     @Override
-    public SaleDataService getSaleDataService(){
-        SaleDataService sale = new SaleDataServiceDataImpl();
-        return sale;
+    public GoodsSaleReturnDataService getGoodsSaleReturnDataService() {
+        GoodsSaleReturnDataService goodsSaleReturnData = new GoodsSaleReturnDataServiceImpl();
+        return goodsSaleReturnData;
+    }
+
+    @Override
+    public GoodsStockDataService getGoodsStockDataService() {
+        GoodsStockDataService goodsStockData = new GoodsStockDataServiceImpl();
+        return goodsStockData;
+    }
+
+    @Override
+    public GoodsStockReturnDataService getGoodsStockReturnDataService() {
+        GoodsStockReturnDataService goodsStockReturnData = new GoodsStockReturnDataServiceImpl();
+        return goodsStockReturnData;
+    }
+
+    @Override
+    public SaleDataService getSaleDataService() {
+        SaleDataService saleData = new SaleDataServiceImpl();
+        return saleData;
+    }
+
+
+    @Override
+    public SaleReturnDataService getSaleReturnDataService() {
+        SaleReturnDataService saleReturnData = new SaleReturnDataServiceImpl();
+        return saleReturnData;
     }
 
     @Override
     public StockDataService getStockDataService(){
         StockDataService stock = new StockDataServiceImpl();
         return stock;
+    }
+
+    @Override
+    public StockReturnDataService getStockReturnDataService() {
+        StockReturnDataService stockReturnData = new StockReturnDataServiceImpl();
+        return stockReturnData;
     }
 }

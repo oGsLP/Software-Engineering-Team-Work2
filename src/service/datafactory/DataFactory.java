@@ -4,12 +4,7 @@ package service.datafactory;
  * factory 模式，提供各种数据服务
  */
 
-import service.dataservice.ClassifyDataService;
-import service.dataservice.CommodityDataService;
-import service.dataservice.GoodsDataService;
-import service.dataservice.MemberDataService;
-import service.dataservice.SaleDataService;
-import service.dataservice.StockDataService;
+import service.dataservice.*;
 
 public interface DataFactory {
 
@@ -21,11 +16,21 @@ public interface DataFactory {
 
     public MemberDataService getMemberDataService();
 
-    public ReturnDataService getReturnDataService();
+    public GoodsSaleDataService getGoodsSaleDataService();
+
+    public GoodsSaleReturnDataService getGoodsSaleReturnDataService();
+
+    public GoodsStockDataService getGoodsStockDataService();
+
+    public GoodsStockReturnDataService getGoodsStockReturnDataService();
 
     public SaleDataService getSaleDataService();
 
+    public SaleReturnDataService getSaleReturnDataService();
+
     public StockDataService getStockDataService();
+
+    public StockReturnDataService getStockReturnDataService();
 
 
 }

@@ -23,6 +23,7 @@ public class VOChangeToPO {
         return po;
     }
 
+
     public MemberPO membervo_to_memberpo(MemberVO vo){
         MemberPO po = new MemberPO();
         po.setNumber(vo.getNumber());
@@ -40,6 +41,7 @@ public class VOChangeToPO {
         return po;
     }
 
+
     public ClassifyPO classifyvo_to_classifypo(ClassifyVO vo){
         ClassifyPO po = new ClassifyPO();
         po.setId(vo.getId());
@@ -55,6 +57,7 @@ public class VOChangeToPO {
         return po;
     }
 
+
     public GoodsStockPO goodsStockvo_to_goodsStockpo(GoodsStockVO vo){
         GoodsStockPO po = new GoodsStockPO();
         po.setId(vo.getId());
@@ -64,6 +67,18 @@ public class VOChangeToPO {
         po.setTotalPrice(vo.getTotalPrice());
         return po;
     }
+
+
+    public GoodsStockReturnPO goodsStockReturnvo_to_goodsStockReturnpo(GoodsStockReturnVO vo){
+        GoodsStockReturnPO po = new GoodsStockReturnPO();
+        po.setId(vo.getId());
+        po.setPo(goodsvo_to_goodspo(vo.getVo()));
+        po.setRemark(vo.getRemark());
+        po.setStockReturnNumber(vo.getStockReturnNumber());
+        po.setTotalPrice(vo.getTotalPrice());
+        return po;
+    }
+
 
     public GoodsSalePO goodsSalevo_to_goodsSalepo(GoodsSaleVO vo){
         GoodsSalePO po = new GoodsSalePO();
@@ -75,7 +90,20 @@ public class VOChangeToPO {
         po.setTotalPrice(vo.getTotalPrice());
         return po;
     }
-    
+
+
+    public GoodsSaleReturnPO goodsSaleReturnvo_to_goodsSaleReturnpo(GoodsSaleReturnVO vo){
+        GoodsSaleReturnPO po = new GoodsSaleReturnPO();
+        po.setId(vo.getId());
+        po.setPo(goodsvo_to_goodspo(vo.getVo()));
+        po.setPrice(vo.getPrice());
+        po.setRemark(vo.getRemark());
+        po.setSaleReturnNumber(vo.getSaleReturnNumber());
+        po.setTotalPrice(vo.getTotalPrice());
+        return po;
+    }
+
+
 
 
 }
