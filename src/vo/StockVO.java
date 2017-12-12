@@ -1,58 +1,144 @@
 package vo;
 
-import po.GoodsPO;
-
-import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by py on 2017/10/20.
  */
 public class StockVO{
-        String number;
-        String provider;
-        String garbage;
-        long price;
-        long totalPrice;
-        String remark;
-        ArrayList<GoodsVO> receipt;
-        CommodityVO vo;
-        //供应商，仓库，操作员，入库商品列表，备注，总额合计。其中入库商品列表包含的信息有：商品编号，名称（从商品选择界面进行选择），型号，数量（手动输入），单
-// 价（默认为商品信息中的进价），金额，备注（手动输入）。没有下划线的部分是自动计算并填充进去的。进货单通过审批后，会更改库存数据和客户的应收应付数据。）
+    /**
+     * 单据编号
+     */
+    String number;
 
-    public StockVO(String number, String provider, String garbage,ArrayList<GoodsVO> receipt,
-                   long price, long totalPrice, String remark, CommodityVO vo){
-        this.number = number;
-        this.provider = provider;
-        this.garbage = garbage;
-        this.receipt = receipt;
-        this.price = price;
-        this.totalPrice = totalPrice;
-        this.remark = remark;
-        this.vo = vo;
+    /**
+     * 当天日期
+     */
+    String date;
+
+    /**
+     * 当天单据号码
+     */
+
+    int receiptNumber;
+
+    /**
+     * 供应商
+     */
+    String provider;
+
+    /**
+     * 仓库
+     */
+    int commodityNumber;
+
+    /**
+     * 操作员
+     */
+    String operator;
+
+    /**
+     * 入库商品
+     */
+    Set<GoodsStockVO> stockSet = new HashSet<>();
+
+    /**
+     * 备注
+     */
+    String remark;
+
+    /**
+     * 总额
+     */
+    double totalPrice;
+
+    public StockVO() {
     }
-        public String getNumber(){
-            return number;
-        }
-        public String getProvider(){
-            return provider;
-        }
-        public String getGarbage(){
-            return garbage;
-        }
-        public ArrayList<GoodsVO> getReceipt(){
-            return receipt;
-        }
-        public long getPrice(){
-            return price;
-        }
-        public long getTotalPrice(){
-            return totalPrice;
-        }
-        public String getRemark(){
-            return remark;
-        }
-        public CommodityVO getVo(){
-            return vo;
-        }
+
+    public StockVO(String number, String date, int receiptNumbe,
+                   String provider, int commodityNumber, String operator,
+                   Set<GoodsStockVO> stockSe, String remark, double totalPrice) {
+        this.number = number;
+        this.date = date;
+        this.receiptNumber = receiptNumber;
+        this.provider = provider;
+        this.commodityNumber = commodityNumber;
+        this.operator = operator;
+        this.stockSet = stockSet;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public int getReceiptNumber() {
+        return receiptNumber;
+    }
+
+    public void setReceiptNumber(int receiptNumber) {
+        this.receiptNumber = receiptNumber;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
+
+    public int getCommodityNumber() {
+        return commodityNumber;
+    }
+
+    public void setCommodityNumber(int commodityNumber) {
+        this.commodityNumber = commodityNumber;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    public Set<GoodsStockVO> getStockSet() {
+        return stockSet;
+    }
+
+    public void setStockSet(Set<GoodsStockVO> stockSet) {
+        this.stockSet = stockSet;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 }

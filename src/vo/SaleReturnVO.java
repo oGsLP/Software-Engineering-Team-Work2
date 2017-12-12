@@ -3,12 +3,9 @@ package vo;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by py on 2017/10/20.
- */
-public class SaleVO {
+public class SaleReturnVO {
     /**
-     * 单据编号（XSD-yyyyMMdd-xxxxx）
+     * 单据编号（XSTHD-yyyyMMdd-xxxxx）
      */
     String number;
 
@@ -46,25 +43,10 @@ public class SaleVO {
     /**
      * 出货商品
      */
-    Set<GoodsSaleVO> saleSet = new HashSet<>();
+    Set<GoodsSaleReturnVO> saleReturnSet = new HashSet<>();
 
     /**
-     * 折让前总额
-     */
-    private double totalPrice;
-
-    /**
-     * 折让金额
-     */
-    private double discount;
-
-    /**
-     * 代金券金额
-     */
-    private double voucher;
-
-    /**
-     * 折让后总额
+     * 总额
      */
     private double payPrice;
 
@@ -73,12 +55,12 @@ public class SaleVO {
      */
     String remark;
 
-    public SaleVO() {
+    public SaleReturnVO() {
     }
 
-    public SaleVO(String number, String date, int receiptNumber, String retailer,
-                  String salesman, String operator, int commodityNumber, Set<GoodsSaleVO> saleSet,
-                  double totalPrice, double discount, double voucher, double payPrice, String remark) {
+    public SaleReturnVO(String number, String date, int receiptNumber, String retailer,
+                        String salesman, String operator, int commodityNumber,
+                        Set<GoodsSaleReturnVO> saleReturnSet, double payPrice, String remark) {
         this.number = number;
         this.date = date;
         this.receiptNumber = receiptNumber;
@@ -86,10 +68,7 @@ public class SaleVO {
         this.salesman = salesman;
         this.operator = operator;
         this.commodityNumber = commodityNumber;
-        this.saleSet = saleSet;
-        this.totalPrice = totalPrice;
-        this.discount = discount;
-        this.voucher = voucher;
+        this.saleReturnSet = saleReturnSet;
         this.payPrice = payPrice;
         this.remark = remark;
     }
@@ -150,36 +129,12 @@ public class SaleVO {
         this.commodityNumber = commodityNumber;
     }
 
-    public Set<GoodsSaleVO> getSaleSet() {
-        return saleSet;
+    public Set<GoodsSaleReturnVO> getSaleReturnSet() {
+        return saleReturnSet;
     }
 
-    public void setSaleSet(Set<GoodsSaleVO> saleSet) {
-        this.saleSet = saleSet;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public double getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(double discount) {
-        this.discount = discount;
-    }
-
-    public double getVoucher() {
-        return voucher;
-    }
-
-    public void setVoucher(double voucher) {
-        this.voucher = voucher;
+    public void setSaleReturnSet(Set<GoodsSaleReturnVO> saleReturnSet) {
+        this.saleReturnSet = saleReturnSet;
     }
 
     public double getPayPrice() {

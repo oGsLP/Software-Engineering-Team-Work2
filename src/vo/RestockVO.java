@@ -1,15 +1,9 @@
-package po;
+package vo;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity(name = "Restock")
-public class RestockPO implements Serializable {
+public class RestockVO {
     /**
      * 单据编号
      */
@@ -44,7 +38,7 @@ public class RestockPO implements Serializable {
     /**
      * 入库商品
      */
-    Set<GoodsStockReturnPO> stockReturnSet = new HashSet<>();
+    Set<GoodsStockReturnVO> stockReturnSet = new HashSet<>();
 
     /**
      * 备注
@@ -56,23 +50,12 @@ public class RestockPO implements Serializable {
      */
     double totalPrice;
 
-    public RestockPO() {
+    public RestockVO() {
     }
 
-    /**
-     *
-     * @param number
-     * @param date
-     * @param receiptNumber
-     * @param provider
-     * @param commodityNumber
-     * @param operator
-     * @param stockReturnSet
-     * @param remark
-     * @param totalPrice
-     */
-    public RestockPO(String number, String date, int receiptNumber, String provider, int commodityNumber,
-                     String operator, Set<GoodsStockReturnPO> stockReturnSet, String remark, double totalPrice) {
+    public RestockVO(String number, String date, int receiptNumber,
+                     String provider, int commodityNumber, String operator,
+                     Set<GoodsStockReturnVO> stockReturnSet, String remark, double totalPrice) {
         this.number = number;
         this.date = date;
         this.receiptNumber = receiptNumber;
@@ -83,7 +66,7 @@ public class RestockPO implements Serializable {
         this.remark = remark;
         this.totalPrice = totalPrice;
     }
-    @Id
+
     public String getNumber() {
         return number;
     }
@@ -132,12 +115,11 @@ public class RestockPO implements Serializable {
         this.operator = operator;
     }
 
-    @OneToMany(cascade = CascadeType.ALL)
-    public Set<GoodsStockReturnPO> getStockReturnSet() {
+    public Set<GoodsStockReturnVO> getStockReturnSet() {
         return stockReturnSet;
     }
 
-    public void setStockReturnSet(Set<GoodsStockReturnPO> stockReturnSet) {
+    public void setStockReturnSet(Set<GoodsStockReturnVO> stockReturnSet) {
         this.stockReturnSet = stockReturnSet;
     }
 
