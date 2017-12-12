@@ -20,9 +20,11 @@ public class GoodsStockBLServiceImpl implements GoodsStockBLService {
         GoodsStockVO goodsStockVO = new GoodsStockVO();
         goodsStockVO.setStockNumber(stockNumber);
         goodsStockVO.setRemark(remark);
-
+        goodsStockVO.setVo(vo);
         double price = vo.getPurchasePrice();
         goodsStockVO.setTotalPrice(price * stockNumber);
+        //初始化vo
+
         GoodsStockPO po  = voChangeToPO.goodsStockvo_to_goodsStockpo(goodsStockVO);
         dataFactory.getGoodsStockDataService().add(po);
         return ResultMessage.Success;
@@ -33,8 +35,10 @@ public class GoodsStockBLServiceImpl implements GoodsStockBLService {
         GoodsStockVO goodsStockVO = new GoodsStockVO();
         goodsStockVO.setStockNumber(stockNumber);
         goodsStockVO.setRemark(remark);
-
+        goodsStockVO.setVo(vo);
         goodsStockVO.setTotalPrice(price * stockNumber);
+        //初始化vo
+
         GoodsStockPO po  = voChangeToPO.goodsStockvo_to_goodsStockpo(goodsStockVO);
         dataFactory.getGoodsStockDataService().add(po);
         return ResultMessage.Success;
