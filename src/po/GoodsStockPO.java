@@ -1,9 +1,6 @@
 package po;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 /**
  * 封装了一个商品进货的类，包括商品编号和商品，备注和总价

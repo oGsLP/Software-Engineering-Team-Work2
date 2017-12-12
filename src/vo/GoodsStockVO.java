@@ -26,6 +26,9 @@ public class GoodsStockVO {
      */
     double totalPrice = vo.getPurchasePrice() * stockNumber;
 
+    public GoodsStockVO() {
+    }
+
     public GoodsStockVO(int id, GoodsVO vo, int stockNumber, String remark, double totalPrice) {
         this.id = id;
         this.vo = vo;

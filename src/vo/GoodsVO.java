@@ -8,30 +8,37 @@ public class GoodsVO {
      * 商品编号
      */
     private int number;
+
     /**
      * 商品名称
      */
     private String name;
+
     /**
      * 商品类型
      */
     private String type;
+
     /**
      * 库存数量
      */
     private long commodityNum;
+
     /**
      * 进价
      */
     private double purchasePrice;
+
     /**
      * 零售价
      */
     private double retailPrice;
+
     /**
      * 最近进价
      */
     private double recentPurPrice;
+
     /**
      * *最近零售价
      */

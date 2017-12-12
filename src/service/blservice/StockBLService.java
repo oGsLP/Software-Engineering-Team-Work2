@@ -10,4 +10,6 @@ import java.rmi.RemoteException;
 public interface StockBLService {
 
    public ResultMessage add() throws RemoteException;
+
+
 }
