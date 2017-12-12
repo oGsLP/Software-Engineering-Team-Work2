@@ -18,6 +18,9 @@ public class GoodsStockReturnBLServiceImpl implements GoodsStockReturnBLService 
 
     @Override
     public ResultMessage add(GoodsVO vo, int stockReturnNumber, double price, String remark) throws RemoteException {
+        if(vo == null)
+            return ResultMessage.Fail;
+
         GoodsStockReturnVO goodsStockReturnVO = new GoodsStockReturnVO();
         goodsStockReturnVO.setVo(vo);
         goodsStockReturnVO.setStockReturnNumber(stockReturnNumber);
@@ -32,6 +35,9 @@ public class GoodsStockReturnBLServiceImpl implements GoodsStockReturnBLService 
 
     @Override
     public ResultMessage delete(GoodsStockReturnVO vo) throws RemoteException {
+        if(vo == null)
+            return ResultMessage.Fail;
+
         GoodsStockReturnPO po = voChangeToPO.goodsStockReturnvo_to_goodsStockReturnpo(vo);
         dataFactory.getGoodsStockReturnDataService().delete(po);
         return ResultMessage.Success;
@@ -39,6 +45,9 @@ public class GoodsStockReturnBLServiceImpl implements GoodsStockReturnBLService 
 
     @Override
     public ResultMessage update(GoodsStockReturnVO vo) throws RemoteException {
+        if(vo == null)
+            return ResultMessage.Fail;
+
         GoodsStockReturnPO po = voChangeToPO.goodsStockReturnvo_to_goodsStockReturnpo(vo);
         dataFactory.getGoodsStockReturnDataService().update(po);
         return ResultMessage.Success;

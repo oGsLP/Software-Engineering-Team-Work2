@@ -32,6 +32,9 @@ public class GoodsStockBLServiceImpl implements GoodsStockBLService {
 
     @Override
     public ResultMessage add(GoodsVO vo, int stockNumber, double price, String remark) throws RemoteException {
+        if(vo == null)
+            return ResultMessage.Fail;
+
         GoodsStockVO goodsStockVO = new GoodsStockVO();
         goodsStockVO.setStockNumber(stockNumber);
         goodsStockVO.setRemark(remark);
@@ -46,6 +49,9 @@ public class GoodsStockBLServiceImpl implements GoodsStockBLService {
 
     @Override
     public ResultMessage delete(GoodsStockVO vo) throws RemoteException {
+        if(vo == null)
+            return ResultMessage.Fail;
+
         GoodsStockPO po = voChangeToPO.goodsStockvo_to_goodsStockpo(vo);
         dataFactory.getGoodsStockDataService().delete(po);
         return ResultMessage.Success;
@@ -53,6 +59,9 @@ public class GoodsStockBLServiceImpl implements GoodsStockBLService {
 
     @Override
     public ResultMessage update(GoodsStockVO vo) throws RemoteException {
+        if(vo == null)
+            return ResultMessage.Fail;
+
         GoodsStockPO po = voChangeToPO.goodsStockvo_to_goodsStockpo(vo);
         dataFactory.getGoodsStockDataService().update(po);
         return ResultMessage.Success;

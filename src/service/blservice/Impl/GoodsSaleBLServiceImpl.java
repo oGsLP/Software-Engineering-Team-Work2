@@ -1,6 +1,7 @@
 package service.blservice.Impl;
 
 import objects.ResultMessage;
+import po.GoodsSalePO;
 import service.VOChangeToPO;
 import service.blservice.GoodsSaleBLService;
 import service.datafactory.DataFactory;
@@ -16,18 +17,38 @@ public class GoodsSaleBLServiceImpl implements GoodsSaleBLService {
 
     @Override
     public ResultMessage add(GoodsVO vo, int saleNumber, double price, String remark) throws RemoteException {
-        GoodsSaleVO goodsSaleVO = new GoodsSaleVO();
+        if(vo == null)
+            return ResultMessage.Fail;
 
-        return null;
+        GoodsSaleVO goodsSaleVO = new GoodsSaleVO();
+        goodsSaleVO.setVo(vo);
+        goodsSaleVO.setSaleNumber(saleNumber);
+        goodsSaleVO.setPrice(price);
+        goodsSaleVO.setRemark(remark);
+        //初始化vo
+
+        GoodsSalePO po = voChangeToPO.goodsSalevo_to_goodsSalepo(goodsSaleVO);
+        dataFactory.getGoodsSaleDataService().add(po);
+        return ResultMessage.Success;
     }
 
     @Override
     public ResultMessage delete(GoodsSaleVO vo) throws RemoteException {
-        return null;
+        if(vo == null)
+            return ResultMessage.Fail;
+
+        GoodsSalePO po = voChangeToPO.goodsSalevo_to_goodsSalepo(vo);
+        dataFactory.getGoodsSaleDataService().delete(po);
+        return ResultMessage.Success;
     }
 
     @Override
     public ResultMessage update(GoodsSaleVO vo) throws RemoteException {
-        return null;
+        if(vo == null)
+            return ResultMessage.Fail;
+
+        GoodsSalePO po = voChangeToPO.goodsSalevo_to_goodsSalepo(vo);
+        dataFactory.getGoodsSaleDataService().update(po);
+        return ResultMessage.Success;
     }
 }
