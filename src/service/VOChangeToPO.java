@@ -103,6 +103,25 @@ public class VOChangeToPO {
         return po;
     }
 
+    public StockPO stockvo_to_stockpo(StockVO vo){
+        StockPO po = new StockPO();
+        po.setReceiptNumber(vo.getReceiptNumber());
+        po.setCommodityNumber(vo.getCommodityNumber());
+        po.setDate(vo.getDate());
+        po.setNumber(vo.getNumber());
+        po.setOperator(vo.getOperator());
+        po.setProvider(vo.getProvider());
+        po.setRemark(vo.getRemark());
+        po.setTotalPrice(vo.getTotalPrice());
+
+        Set<GoodsStockPO> poSet = new HashSet<>();
+        Set<GoodsStockVO> voSet = vo.getStockSet();
+        for(GoodsStockVO goodsVo :voSet){
+            poSet.add(goodsStockvo_to_goodsStockpo(goodsVo));
+        }
+        po.setStockSet(poSet);
+        return po;
+    }
 
 
 
