@@ -8,12 +8,14 @@ import service.datafactory.DataFactory;
 import service.datafactory.DataFactoryImpl;
 import vo.MemberVO;
 
+import java.rmi.RemoteException;
+
 public class MemberBLServiceImpl implements MemberBLService {
     VOChangeToPO voChangeToPO = new VOChangeToPO();
     DataFactory dataFactory = new DataFactoryImpl();
 
     @Override
-    public ResultMessage add(MemberVO vo) {
+    public ResultMessage add(MemberVO vo) throws RemoteException{
         if(vo == null)
             return ResultMessage.Fail;
         MemberPO po = voChangeToPO.membervo_to_memberpo(vo);
@@ -22,7 +24,7 @@ public class MemberBLServiceImpl implements MemberBLService {
     }
 
     @Override
-    public ResultMessage delete(MemberVO vo) {
+    public ResultMessage delete(MemberVO vo) throws RemoteException{
         if(vo == null)
             return ResultMessage.Fail;
         MemberPO po = voChangeToPO.membervo_to_memberpo(vo);
@@ -31,7 +33,7 @@ public class MemberBLServiceImpl implements MemberBLService {
     }
 
     @Override
-    public ResultMessage update(MemberVO vo) {
+    public ResultMessage update(MemberVO vo) throws RemoteException{
         if(vo == null)
             return ResultMessage.Fail;
         MemberPO po = voChangeToPO.membervo_to_memberpo(vo);

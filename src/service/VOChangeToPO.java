@@ -123,6 +123,30 @@ public class VOChangeToPO {
         return po;
     }
 
+    public SalePO salevo_to_salepo(SaleVO vo){
+        SalePO po = new SalePO();
+
+        po.setDate(vo.getDate());
+        po.setReceiptNumber(vo.getReceiptNumber());
+        po.setNumber(vo.getNumber());
+        po.setCommodityNumber(vo.getCommodityNumber());
+        po.setDiscount(vo.getDiscount());
+        po.setOperator(vo.getOperator());
+        po.setTotalPrice(vo.getTotalPrice());
+        po.setRemark(vo.getRemark());
+        po.setPayPrice(vo.getPayPrice());
+        po.setRetailer(vo.getRetailer());
+        po.setSalesman(vo.getSalesman());
+        po.setVoucher(vo.getVoucher());
+
+        Set<GoodsSalePO> set = new HashSet<>();
+        for(GoodsSaleVO vo1 : vo.getSaleSet()){
+            set.add(goodsSalevo_to_goodsSalepo(vo1));
+        }
+        po.setSaleSet(set);
+        return po;
+    }
+
 
 
 }
