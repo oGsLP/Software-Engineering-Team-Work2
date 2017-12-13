@@ -27,7 +27,7 @@ public class StockReturnPO implements Serializable {
      * 当天单据号码
      */
 
-    int receiptNum;
+    int receiptNumber;
 
     /**
      * 供应商
@@ -37,7 +37,7 @@ public class StockReturnPO implements Serializable {
     /**
      * 仓库
      */
-    int commodityNum;
+    int commodityNumber;
 
     /**
      * 操作员
@@ -61,13 +61,14 @@ public class StockReturnPO implements Serializable {
     public StockReturnPO() {
     }
 
-    public StockReturnPO(String number, String date, int receiptNum, String provider, int commodityNum,
-                         String operator, Set<GoodsStockReturnPO> stockSet, String remark, double totalPrice) {
+    public StockReturnPO(String number, String date, int receiptNumber,
+                         String provider, int commodityNumber, String operator,
+                         Set<GoodsStockReturnPO> stockSet, String remark, double totalPrice) {
         this.number = number;
         this.date = date;
-        this.receiptNum = receiptNum;
+        this.receiptNumber = receiptNumber;
         this.provider = provider;
-        this.commodityNum = commodityNum;
+        this.commodityNumber = commodityNumber;
         this.operator = operator;
         this.stockSet = stockSet;
         this.remark = remark;
@@ -91,12 +92,12 @@ public class StockReturnPO implements Serializable {
         this.date = date;
     }
 
-    public int getReceiptNum() {
-        return receiptNum;
+    public int getReceiptNumber() {
+        return receiptNumber;
     }
 
-    public void setReceiptNum(int receiptNum) {
-        this.receiptNum = receiptNum;
+    public void setReceiptNumber(int receiptNumber) {
+        this.receiptNumber = receiptNumber;
     }
 
     public String getProvider() {
@@ -107,12 +108,12 @@ public class StockReturnPO implements Serializable {
         this.provider = provider;
     }
 
-    public int getCommodityNum() {
-        return commodityNum;
+    public int getCommodityNumber() {
+        return commodityNumber;
     }
 
-    public void setCommodityNum(int commodityNum) {
-        this.commodityNum = commodityNum;
+    public void setCommodityNumber(int commodityNumber) {
+        this.commodityNumber = commodityNumber;
     }
 
     public String getOperator() {

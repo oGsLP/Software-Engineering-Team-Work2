@@ -59,14 +59,14 @@ public class AddHelper {
         }
     }
 
-    public RestockVO getRestockHelp(String provider, String remark, Set<GoodsStockReturnVO> set){
+    public StockReturnVO getStockReturnHelp(String provider, String remark, Set<GoodsStockReturnVO> set){
         String operation = "from Restock";
         String postString = "JHTHD-" + dateHelper.getDate() + "-";
-        RestockVO vo = new RestockVO();
+        StockReturnVO vo = new StockReturnVO();
         vo.setProvider(provider);
         vo.setRemark(remark);
         vo.setDate(dateHelper.getDate());
-        vo.setStockReturnSet(set);
+        vo.setStockSet(set);
 
         double totalPrice = 0.0;
         for(GoodsStockReturnVO goodsStockReturnVO: set){
@@ -76,7 +76,7 @@ public class AddHelper {
         /**
          * 寻找上一次记录的单据
          */
-        ArrayList<RestockPO> list = (ArrayList<RestockPO>)HQLTools.find(operation);
+        ArrayList<StockReturnPO> list = (ArrayList<StockReturnPO>)HQLTools.find(operation);
         int idx = list.size() - 1;
         /**
          * 如果没有记录，直接作为1号单据存储
@@ -86,7 +86,7 @@ public class AddHelper {
             vo.setNumber( postString + addZero("1"));
             return vo;
         }
-        RestockPO po = list.get(idx);
+        StockReturnPO po = list.get(idx);
         String lastDate = po.getDate();
         /**
          * 如果单据是第二天，作为第一号单据， id = 1，否则id++

@@ -123,6 +123,27 @@ public class VOChangeToPO {
         return po;
     }
 
+    public StockReturnPO stockReturnvo_to_stockReturnpo(StockReturnVO vo){
+        StockReturnPO po = new StockReturnPO();
+
+        po.setNumber(vo.getNumber());
+        po.setDate(vo.getDate());
+        po.setReceiptNumber(vo.getReceiptNumber());
+        po.setCommodityNumber(vo.getCommodityNumber());
+        po.setOperator(vo.getOperator());
+        po.setProvider(vo.getProvider());
+        po.setRemark(vo.getRemark());
+        po.setTotalPrice(vo.getTotalPrice());
+
+        Set<GoodsStockReturnPO> poSet = new HashSet<>();
+        Set<GoodsStockReturnVO> voSet = vo.getStockSet();
+        for(GoodsStockReturnVO vo1 : voSet){
+            poSet.add(goodsStockReturnvo_to_goodsStockReturnpo(vo1));
+        }
+        po.setStockSet(poSet);
+        return po;
+    }
+
     public SalePO salevo_to_salepo(SaleVO vo){
         SalePO po = new SalePO();
 
@@ -147,6 +168,27 @@ public class VOChangeToPO {
         return po;
     }
 
+    public SaleReturnPO saleReturnvo_to_saleReturnpo(SaleReturnVO vo){
+        SaleReturnPO po = new SaleReturnPO();
+
+        po.setDate(vo.getDate());
+        po.setNumber(vo.getNumber());
+        po.setReceiptNumber(vo.getReceiptNumber());
+        po.setCommodityNumber(vo.getCommodityNumber());
+        po.setOperator(vo.getOperator());
+        po.setRemark(vo.getRemark());
+        po.setRetailer(vo.getRetailer());
+        po.setSalesman(vo.getSalesman());
+        po.setPayPrice(vo.getPayPrice());
+
+        Set<GoodsSaleReturnPO> poSet = new HashSet<>();
+        Set<GoodsSaleReturnVO> voSet = new HashSet<>();
+        for(GoodsSaleReturnVO vo1 : voSet){
+            poSet.add(goodsSaleReturnvo_to_goodsSaleReturnpo(vo1));
+        }
+        po.setSaleReturnSet(poSet);
+        return po;
+    }
 
 
 }

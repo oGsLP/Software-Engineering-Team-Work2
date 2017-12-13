@@ -3,7 +3,7 @@ package vo;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RestockVO {
+public class StockReturnVO {
     /**
      * 单据编号
      */
@@ -38,31 +38,30 @@ public class RestockVO {
     /**
      * 入库商品
      */
-    Set<GoodsStockReturnVO> stockReturnSet = new HashSet<>();
-
+    Set<GoodsStockReturnVO> stockSet = new HashSet<>();
     /**
      * 备注
      */
     String remark;
 
     /**
-     * 总额
+     * 总额合计
      */
     double totalPrice;
 
-    public RestockVO() {
+    public StockReturnVO() {
     }
 
-    public RestockVO(String number, String date, int receiptNumber,
-                     String provider, int commodityNumber, String operator,
-                     Set<GoodsStockReturnVO> stockReturnSet, String remark, double totalPrice) {
+    public StockReturnVO(String number, String date, int receiptNumber,
+                         String provider, int commodityNumber, String operator,
+                         Set<GoodsStockReturnVO> stockSet, String remark, double totalPrice) {
         this.number = number;
         this.date = date;
         this.receiptNumber = receiptNumber;
         this.provider = provider;
         this.commodityNumber = commodityNumber;
         this.operator = operator;
-        this.stockReturnSet = stockReturnSet;
+        this.stockSet = stockSet;
         this.remark = remark;
         this.totalPrice = totalPrice;
     }
@@ -115,12 +114,12 @@ public class RestockVO {
         this.operator = operator;
     }
 
-    public Set<GoodsStockReturnVO> getStockReturnSet() {
-        return stockReturnSet;
+    public Set<GoodsStockReturnVO> getStockSet() {
+        return stockSet;
     }
 
-    public void setStockReturnSet(Set<GoodsStockReturnVO> stockReturnSet) {
-        this.stockReturnSet = stockReturnSet;
+    public void setStockSet(Set<GoodsStockReturnVO> stockSet) {
+        this.stockSet = stockSet;
     }
 
     public String getRemark() {

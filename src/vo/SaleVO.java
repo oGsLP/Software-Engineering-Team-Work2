@@ -76,6 +76,22 @@ public class SaleVO {
     public SaleVO() {
     }
 
+    /**
+     *
+     * @param number
+     * @param date
+     * @param receiptNumber
+     * @param retailer
+     * @param salesman
+     * @param operator
+     * @param commodityNumber
+     * @param saleSet
+     * @param totalPrice
+     * @param discount
+     * @param voucher
+     * @param payPrice
+     * @param remark
+     */
     public SaleVO(String number, String date, int receiptNumber, String retailer,
                   String salesman, String operator, int commodityNumber, Set<GoodsSaleVO> saleSet,
                   double totalPrice, double discount, double voucher, double payPrice, String remark) {
