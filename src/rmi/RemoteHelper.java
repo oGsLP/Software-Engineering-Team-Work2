@@ -4,14 +4,14 @@ package rmi;
  * Created by py on 2017/10/19.
  */
 
+import service.blservice.*;
+
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
 import java.rmi.Naming;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
-
-import service.blservice.*;
 
 public class RemoteHelper {
     private Remote remote;
@@ -63,15 +63,37 @@ public class RemoteHelper {
         return (MemberBLService)remote;
     }
 
-    public ReturnBLService getReturnBLService(){
-        return (ReturnBLService)remote;
+
+    public GoodsStockBLService getGoodsStockBLService(){
+        return (GoodsStockBLService)remote;
     }
+
+    public GoodsStockReturnBLService getGoodsStockReturnBLService(){
+        return (GoodsStockReturnBLService)remote;
+    }
+
+    public GoodsSaleBLService getGoodsSaleBLService(){
+        return (GoodsSaleBLService)remote;
+    }
+
+    public GoodsSaleReturnBLService getGoodsSaleReturnBLService(){
+        return (GoodsSaleReturnBLService)remote;
+    }
+
 
     public SaleBLService getSaleBLService(){
         return (SaleBLService)remote;
     }
+
+    public SaleReturnBLService getSaleReturnBLService(){
+        return (SaleReturnBLService)remote;
+    }
     public StockBLService getStockBLService(){
         return (StockBLService)remote;
+    }
+
+    public StockReturnBLService getStockReturnBLService(){
+        return (StockReturnBLService)remote;
     }
 
 }
