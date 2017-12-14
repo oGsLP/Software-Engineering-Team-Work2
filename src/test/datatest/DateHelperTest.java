@@ -14,7 +14,6 @@ public class DateHelperTest {
     @Test
     public void isSameDay() throws Exception {
         System.out.println(dateHelper.getDate());
-
         String s1 = "2017-12-12";
         String s2 = "2017-12-12";
         String s3 = "2016-12-12";

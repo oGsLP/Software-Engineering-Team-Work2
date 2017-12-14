@@ -4,57 +4,167 @@ package vo;
  * Created by py on 2017/10/19.
  */
 public class CommodityVO {
-    String presetTime;      //预设时间
-    String date;            //日期
-    long deliveryAmount;    //出库数量，金额
-    long deliveryMoney;
-    long storageAmount;     //入库数量，金额
-    long storageMoney;
-    long stockAmount;       //进货数量，金额
-    long stockMoney;
-    long saleAmount;        //销售数量，金额
-    long saleMoney;
+    /**
+     * id
+     */
+    private int id;
 
-    public CommodityVO(String date, long deliveryAmount, long deliveryMoney, long storageAmount, long storageMoney,
-                       long stockAmount, long stockMoney, long saleAmount, long saleMoney){
+    /**
+     * 预设时间
+     */
+    public String presetTime;
+
+    /**
+     * 日期
+     */
+    public String date;
+
+    /**
+     * 出库数量
+     */
+    private int deliveryAmount;
+
+    /**
+     * 出库金额
+     */
+    private double deliveryMoney;
+
+    /**
+     * 入库数量
+     */
+    private int storageAmount;
+
+    /**
+     *  入库金额
+     */
+    private double storageMoney;
+
+    /**
+     * 进货数量
+     */
+    private int stockAmount;
+
+    /**
+     *  进货金额
+     */
+    private double stockMoney;
+
+    /**
+     * 销售数量
+     */
+    private int saleAmount;
+
+    /**
+     * //销售金额
+     */
+    private double saleMoney;
+
+
+    public CommodityVO() {
+    }
+
+
+    public CommodityVO(int id, String presetTime, String date, int deliveryAmount,
+                       double deliveryMoney, int storageAmount, double storageMoney,
+                       int stockAmount, double stockMoney, int saleAmount, double saleMoney) {
+        this.id = id;
+        this.presetTime = presetTime;
         this.date = date;
         this.deliveryAmount = deliveryAmount;
-        this.deliveryMoney  = deliveryMoney;
-        this.storageAmount  = storageAmount;
-        this.storageMoney   = storageMoney;
-        this.stockAmount    = stockAmount;
-        this.stockMoney     = stockMoney;
-        this.saleAmount     = saleAmount;
-        this.saleMoney      = saleMoney;
+        this.deliveryMoney = deliveryMoney;
+        this.storageAmount = storageAmount;
+        this.storageMoney = storageMoney;
+        this.stockAmount = stockAmount;
+        this.stockMoney = stockMoney;
+        this.saleAmount = saleAmount;
+        this.saleMoney = saleMoney;
     }
-    public String getDate(){
-        return date;
+
+    public int getId() {
+        return id;
     }
-    public String getPresetTime(){
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPresetTime() {
         return presetTime;
     }
-    public long getDeliveryAmount(){
+
+    public void setPresetTime(String presetTime) {
+        this.presetTime = presetTime;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public int getDeliveryAmount() {
         return deliveryAmount;
     }
-    public long getDeliveryMoney(){
+
+    public void setDeliveryAmount(int deliveryAmount) {
+        this.deliveryAmount = deliveryAmount;
+    }
+
+    public double getDeliveryMoney() {
         return deliveryMoney;
     }
-    public long getStorageAmount(){
+
+    public void setDeliveryMoney(double deliveryMoney) {
+        this.deliveryMoney = deliveryMoney;
+    }
+
+    public int getStorageAmount() {
         return storageAmount;
     }
-    public long getStorageMoney(){
+
+    public void setStorageAmount(int storageAmount) {
+        this.storageAmount = storageAmount;
+    }
+
+    public double getStorageMoney() {
         return storageMoney;
     }
-    public long getStockAmount(){
+
+    public void setStorageMoney(double storageMoney) {
+        this.storageMoney = storageMoney;
+    }
+
+    public int getStockAmount() {
         return stockAmount;
     }
-    public long getStockMoney(){
+
+    public void setStockAmount(int stockAmount) {
+        this.stockAmount = stockAmount;
+    }
+
+    public double getStockMoney() {
         return stockMoney;
     }
-    public long getSaleAmount(){
+
+    public void setStockMoney(double stockMoney) {
+        this.stockMoney = stockMoney;
+    }
+
+    public int getSaleAmount() {
         return saleAmount;
     }
-    public long getSaleMoney(){
+
+    public void setSaleAmount(int saleAmount) {
+        this.saleAmount = saleAmount;
+    }
+
+    public double getSaleMoney() {
         return saleMoney;
+    }
+
+    public void setSaleMoney(double saleMoney) {
+        this.saleMoney = saleMoney;
     }
 }
