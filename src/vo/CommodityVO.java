@@ -55,7 +55,7 @@ public class CommodityVO {
     private int saleAmount;
 
     /**
-     * //销售金额
+     * 销售金额
      */
     private double saleMoney;
 

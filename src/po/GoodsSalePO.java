@@ -1,5 +1,6 @@
 package po;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -45,6 +46,14 @@ public class GoodsSalePO implements Serializable {
     public GoodsSalePO() {
     }
 
+    public GoodsSalePO(int id, GoodsPO po, int saleNumber, double price, String remark) {
+        this.id = id;
+        this.po = po;
+        this.saleNumber = saleNumber;
+        this.price = price;
+        this.remark = remark;
+    }
+
     public GoodsSalePO(int id, GoodsPO po, int saleNumber, double price, String remark, double totalPrice) {
         this.id = id;
         this.po = po;
@@ -62,7 +71,7 @@ public class GoodsSalePO implements Serializable {
         this.id = id;
     }
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     public GoodsPO getPo() {
         return po;
     }

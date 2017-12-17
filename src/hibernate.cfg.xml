@@ -11,7 +11,7 @@
 
         <!-- jdbc 的连接 url 和数据库（使用我们之前新建的 hibernate） -->
         <property name = "connection.url">
-        jdbc:mysql://localhost:3306/system?useUnicode=true&amp;characterEncoding = UTF-8</property>
+        jdbc:mysql://localhost:3306/system?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false</property>
         <!-- 数据库用户名 -->
         <property name = "connection.username">root</property>
 
@@ -37,7 +37,6 @@
         <mapping class = "po.ClassifyPO" />
         <mapping class = "po.CommodityPO"/>
         <mapping class = "po.MemberPO" />
-        <mapping class = "po.RestockPO" />
         <mapping class = "po.SalePO" />
         <mapping class = "po.SaleReturnPO"/>
         <mapping class = "po.StockPO" />
