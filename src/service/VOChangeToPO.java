@@ -130,6 +130,7 @@ public class VOChangeToPO {
         po.setProvider(vo.getProvider());
         po.setRemark(vo.getRemark());
         po.setTotalPrice(vo.getTotalPrice());
+        po.setState(vo.getState());
 
         Set<GoodsStockPO> poSet = new HashSet<>();
         Set<GoodsStockVO> voSet = vo.getStockSet();
@@ -151,6 +152,7 @@ public class VOChangeToPO {
         po.setProvider(vo.getProvider());
         po.setRemark(vo.getRemark());
         po.setTotalPrice(vo.getTotalPrice());
+        po.setState(vo.getState());
 
         Set<GoodsStockReturnPO> poSet = new HashSet<>();
         Set<GoodsStockReturnVO> voSet = vo.getStockSet();
@@ -176,7 +178,7 @@ public class VOChangeToPO {
         po.setRetailer(vo.getRetailer());
         po.setSalesman(vo.getSalesman());
         po.setVoucher(vo.getVoucher());
-
+        po.setState(vo.getState());
         Set<GoodsSalePO> set = new HashSet<>();
         for(GoodsSaleVO vo1 : vo.getSaleSet()){
             set.add(goodsSalevo_to_goodsSalepo(vo1));
@@ -197,6 +199,7 @@ public class VOChangeToPO {
         po.setRetailer(vo.getRetailer());
         po.setSalesman(vo.getSalesman());
         po.setPayPrice(vo.getPayPrice());
+        po.setState(vo.getState());
 
         Set<GoodsSaleReturnPO> poSet = new HashSet<>();
         Set<GoodsSaleReturnVO> voSet = new HashSet<>();

@@ -73,6 +73,11 @@ public class SaleVO {
      */
     String remark;
 
+    /**
+     * 单据状态
+     */
+    String state;
+
     public SaleVO() {
     }
 
@@ -108,6 +113,25 @@ public class SaleVO {
         this.voucher = voucher;
         this.payPrice = payPrice;
         this.remark = remark;
+    }
+
+    public SaleVO(String number, String date, int receiptNumber, String retailer, String salesman,
+                  String operator, int commodityNumber, Set<GoodsSaleVO> saleSet, double totalPrice,
+                  double discount, double voucher, double payPrice, String remark, String state) {
+        this.number = number;
+        this.date = date;
+        this.receiptNumber = receiptNumber;
+        this.retailer = retailer;
+        this.salesman = salesman;
+        this.operator = operator;
+        this.commodityNumber = commodityNumber;
+        this.saleSet = saleSet;
+        this.totalPrice = totalPrice;
+        this.discount = discount;
+        this.voucher = voucher;
+        this.payPrice = payPrice;
+        this.remark = remark;
+        this.state = state;
     }
 
     public String getNumber() {
@@ -212,5 +236,13 @@ public class SaleVO {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

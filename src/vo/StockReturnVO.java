@@ -49,6 +49,11 @@ public class StockReturnVO {
      */
     double totalPrice;
 
+    /**
+     * 单据状态
+     */
+    String state;
+
     public StockReturnVO() {
     }
 
@@ -64,6 +69,21 @@ public class StockReturnVO {
         this.stockSet = stockSet;
         this.remark = remark;
         this.totalPrice = totalPrice;
+    }
+
+    public StockReturnVO(String number, String date, int receiptNumber, String provider,
+                         int commodityNumber, String operator, Set<GoodsStockReturnVO> stockSet,
+                         String remark, double totalPrice, String state) {
+        this.number = number;
+        this.date = date;
+        this.receiptNumber = receiptNumber;
+        this.provider = provider;
+        this.commodityNumber = commodityNumber;
+        this.operator = operator;
+        this.stockSet = stockSet;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
+        this.state = state;
     }
 
     public String getNumber() {
@@ -136,5 +156,13 @@ public class StockReturnVO {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

@@ -32,10 +32,25 @@ public class GoodsSaleDataServiceImplTest {
 
     @Test
     public void delete() throws Exception {
+        GoodsSalePO goodsSalePO = new GoodsSalePO(1, po, 100, 200, "没有", 20000);
+        ResultMessage msg = goodsSaleDataService.delete(goodsSalePO);
+        assertEquals(ResultMessage.Success, msg);
+
+        GoodsSalePO goodsSalePO1 = new GoodsSalePO(2, po1, 100, 200, "无" , 20000);
+        ResultMessage msg1 = goodsSaleDataService.delete(goodsSalePO1);
+        assertEquals(ResultMessage.Success, msg1);
     }
+
 
     @Test
     public void update() throws Exception {
+        GoodsSalePO goodsSalePO = new GoodsSalePO(1, po, 100, 200, "修改备注", 20000);
+        ResultMessage msg = goodsSaleDataService.update(goodsSalePO);
+        assertEquals(ResultMessage.Success, msg);
+
+        GoodsSalePO goodsSalePO1 = new GoodsSalePO(2, po1, 100, 200, "修改备注" , 20000);
+        ResultMessage msg1 = goodsSaleDataService.update(goodsSalePO1);
+        assertEquals(ResultMessage.Success, msg1);
     }
 
 }

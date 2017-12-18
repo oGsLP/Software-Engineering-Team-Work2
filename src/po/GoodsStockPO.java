@@ -1,5 +1,7 @@
 package po;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.io.Serializable;
 /**
@@ -30,10 +32,17 @@ public class GoodsStockPO implements Serializable{
     /**
      * 总额合计
      */
-    double totalPrice = po.getPurchasePrice() * stockNumber;
+    double totalPrice;
 
 
     public GoodsStockPO() {
+    }
+
+    public GoodsStockPO(GoodsPO po, int stockNumber, String remark, double totalPrice) {
+        this.po = po;
+        this.stockNumber = stockNumber;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
     }
 
     public GoodsStockPO(int id, GoodsPO po, int stockNumber, String remark, double totalPrice) {
@@ -45,6 +54,8 @@ public class GoodsStockPO implements Serializable{
     }
 
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     public int getId() {
         return id;
     }
@@ -52,6 +63,7 @@ public class GoodsStockPO implements Serializable{
     public void setId(int id) {
         this.id = id;
     }
+
     @OneToOne(cascade = CascadeType.ALL)
     public GoodsPO getPo() {
         return po;

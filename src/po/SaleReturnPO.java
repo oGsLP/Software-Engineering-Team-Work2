@@ -64,6 +64,11 @@ public class SaleReturnPO implements Serializable{
      */
     String remark;
 
+    /**
+     * 单据状态
+     */
+    String state;
+
     public SaleReturnPO() {
     }
 
@@ -93,6 +98,22 @@ public class SaleReturnPO implements Serializable{
         this.saleReturnSet = saleReturnSet;
         this.payPrice = payPrice;
         this.remark = remark;
+    }
+
+    public SaleReturnPO(String number, String date, int receiptNumber, String retailer,
+                        String salesman, String operator, int commodityNumber,
+                        Set<GoodsSaleReturnPO> saleReturnSet, double payPrice, String remark, String state) {
+        this.number = number;
+        this.date = date;
+        this.receiptNumber = receiptNumber;
+        this.retailer = retailer;
+        this.salesman = salesman;
+        this.operator = operator;
+        this.commodityNumber = commodityNumber;
+        this.saleReturnSet = saleReturnSet;
+        this.payPrice = payPrice;
+        this.remark = remark;
+        this.state = state;
     }
 
     @Id
@@ -175,5 +196,13 @@ public class SaleReturnPO implements Serializable{
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

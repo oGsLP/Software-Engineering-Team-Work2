@@ -48,12 +48,12 @@ public class MemberVO {
     /**
      * 应收额度
      */
-    long collectionLimit;
+    double collectionLimit;
 
     /**
      * 应收
      */
-    long collection;
+    double collection;
 
 
 
@@ -61,7 +61,7 @@ public class MemberVO {
      * 应付
      */
 
-    long payment;
+    double payment;
 
     /**
      * 默认业务员
@@ -72,8 +72,8 @@ public class MemberVO {
     }
 
     public MemberVO(int number, String name, String memberClass, int level, String phoneNumber,
-                    String address, String postcode, String mailAddress, long collectionLimit,
-                    long collection, long payment, String managePerson) {
+                    String address, String postcode, String mailAddress, double collectionLimit,
+                    double collection, double payment, String managePerson) {
         this.number = number;
         this.name = name;
         this.memberClass = memberClass;
@@ -152,27 +152,27 @@ public class MemberVO {
         this.mailAddress = mailAddress;
     }
 
-    public long getCollectionLimit() {
+    public double getCollectionLimit() {
         return collectionLimit;
     }
 
-    public void setCollectionLimit(long collectionLimit) {
+    public void setCollectionLimit(double collectionLimit) {
         this.collectionLimit = collectionLimit;
     }
 
-    public long getCollection() {
+    public double getCollection() {
         return collection;
     }
 
-    public void setCollection(long collection) {
+    public void setCollection(double collection) {
         this.collection = collection;
     }
 
-    public long getPayment() {
+    public double getPayment() {
         return payment;
     }
 
-    public void setPayment(long payment) {
+    public void setPayment(double payment) {
         this.payment = payment;
     }
 

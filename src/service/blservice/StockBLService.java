@@ -5,6 +5,7 @@ import vo.GoodsStockVO;
 import vo.StockVO;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Set;
 
 /**
@@ -45,6 +46,27 @@ public interface StockBLService {
     * @throws RemoteException
     */
    public ResultMessage update(StockVO vo) throws RemoteException;
+
+   /**
+    * 得到所有提交的单据
+    * @return
+    */
+   public ArrayList<StockVO> getProcessList() throws RemoteException;
+
+
+   /**
+    * 通过审批
+    * @param vo
+    * @throws RemoteException
+    */
+   public void passCheck(StockVO vo) throws RemoteException;
+
+   /**
+    * 没通过审批
+    * @param vo
+    * @throws RemoteException
+    */
+   public void failCheck(StockVO vo) throws  RemoteException;
 
 
 }

@@ -1,8 +1,8 @@
 package po;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 /**
  * 封装了一个商品销售退货的类，包括商品编号和商品，总金额和备注
@@ -51,7 +51,17 @@ public class GoodsSaleReturnPO implements Serializable {
         this.totalPrice = totalPrice;
     }
 
+    public GoodsSaleReturnPO(GoodsPO po, int saleReturnNumber, double price, String remark, double totalPrice) {
+        this.po = po;
+        this.saleReturnNumber = saleReturnNumber;
+        this.price = price;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
+    }
+
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     public int getId() {
         return id;
     }
@@ -60,7 +70,7 @@ public class GoodsSaleReturnPO implements Serializable {
         this.id = id;
     }
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     public GoodsPO getPo() {
         return po;
     }

@@ -1,9 +1,8 @@
 package po;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -62,7 +61,18 @@ public class GoodsSalePO implements Serializable {
         this.remark = remark;
         this.totalPrice = totalPrice;
     }
+
+    public GoodsSalePO(GoodsPO po, int saleNumber, double price, String remark, double totalPrice) {
+        this.po = po;
+        this.saleNumber = saleNumber;
+        this.price = price;
+        this.remark = remark;
+        this.totalPrice = totalPrice;
+    }
+
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     public int getId() {
         return id;
     }
